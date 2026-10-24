@@ -30,6 +30,10 @@
   padding: 0;
 }
 
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
 html {
   scroll-behavior: smooth;
   background: radial-gradient(circle at 15% 15%, #FFFFFF 0%, #ECEEF2 35%, #DDE1E7 75%, #D2D7DF 100%);

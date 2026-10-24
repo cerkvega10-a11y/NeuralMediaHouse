@@ -1,0 +1,719 @@
+/* ==========================================================================
+   NEURAL MEDIA HOUSE - MINIMALIST EXECUTIVE STYLESHEET
+   Aesthetics: Quiet Luxury, Neutral Palette, Generous Whitespace, High Tactile Feedback
+   Palette: Alabaster (#F8F9FA), Pure White (#FFFFFF), Deep Charcoal (#111827),
+            Slate Gray (#4B5563), Subtle Pearl (#E5E7EB), Steel Blue Accent (#2563EB)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --bg-main: radial-gradient(circle at 15% 15%, #FFFFFF 0%, #ECEEF2 35%, #DDE1E7 75%, #D2D7DF 100%);
+  --bg-card: rgba(255, 255, 255, 0.88);
+  --border-card: rgba(255, 255, 255, 0.9);
+  --shadow-card: 0 12px 32px -8px rgba(15, 23, 42, 0.08);
+  --text-primary: #111827;
+  --text-secondary: #4B5563;
+  --text-muted: #6B7280;
+  --border-light: rgba(229, 231, 235, 0.85);
+  --border-medium: rgba(209, 213, 219, 0.9);
+  --accent-blue: #2563EB;
+  --accent-dark: #0F172A;
+  --btn-default-bg: #1F2937;
+  --btn-default-hover: #374151;
+  --btn-active-bg: #2563EB;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: radial-gradient(circle at 15% 15%, #FFFFFF 0%, #ECEEF2 35%, #DDE1E7 75%, #D2D7DF 100%);
+  background-attachment: fixed;
+  min-height: 100%;
+}
+
+body {
+  background: radial-gradient(circle at 15% 15%, #FFFFFF 0%, #ECEEF2 35%, #DDE1E7 75%, #D2D7DF 100%);
+  background-attachment: fixed;
+  color: var(--text-primary);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+::selection {
+  background-color: #DBEAFE;
+  color: #1E40AF;
+}
+
+/* Typography Helpers */
+.font-heading {
+  font-family: 'Outfit', 'Space Grotesk', -apple-system, sans-serif;
+  letter-spacing: -0.025em;
+}
+
+.font-mono-clean {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Fixed Architectural Bas-Relief Background Container */
+#architectural-bas-relief-bg {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Double Neumorphic Relief Filters / Utility Classes */
+.neumorphic-emboss {
+  filter: drop-shadow(10px 14px 18px rgba(163, 177, 198, 0.45)) drop-shadow(-8px -8px 14px rgba(255, 255, 255, 0.95));
+}
+
+.neumorphic-emboss-soft {
+  filter: drop-shadow(6px 8px 12px rgba(163, 177, 198, 0.35)) drop-shadow(-5px -5px 10px rgba(255, 255, 255, 0.9));
+}
+
+/* Minimalist Clean Cards (Glass & Elevation) */
+.clean-card {
+  background: rgba(255, 255, 255, 0.88) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+  border-radius: 1rem;
+  box-shadow: 0 12px 32px -8px rgba(15, 23, 42, 0.08) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.clean-card:hover {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(255, 255, 255, 1) !important;
+  box-shadow: 0 18px 40px -10px rgba(15, 23, 42, 0.12), 0 0 0 1px rgba(37, 99, 235, 0.12) !important;
+  transform: translateY(-2px);
+}
+
+/* Executive Dark Header (Negro Carbón / Gris Oscuro Sólido #0B0F19) */
+header.sticky,
+header.header-dark {
+  background: #0B0F19 !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.45) !important;
+}
+
+header .nav-btn {
+  color: #FFFFFF !important;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+header .nav-btn:hover {
+  color: #00F0FF !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+header .nav-btn.active-nav,
+header .nav-btn:active {
+  color: #FFFFFF !important;
+  background-color: rgba(37, 99, 235, 0.45) !important;
+  border: 1px solid rgba(0, 240, 255, 0.35) !important;
+  box-shadow: 0 0 14px rgba(0, 240, 255, 0.25) !important;
+  font-weight: 700;
+}
+
+header #platforms-dropdown-toggle svg {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+header #platforms-dropdown-toggle:hover svg {
+  color: #00F0FF !important;
+}
+
+/* Dark Header Dropdown Menu */
+header .dropdown-menu {
+  background: #111827 !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 0.85rem;
+  box-shadow: 0 20px 45px -5px rgba(0, 0, 0, 0.7), 0 4px 12px rgba(0, 0, 0, 0.4);
+  padding: 0.5rem;
+  min-width: 280px;
+}
+
+header .dropdown-item {
+  color: rgba(255, 255, 255, 0.9) !important;
+  border-radius: 0.5rem;
+  transition: all 0.15s ease;
+}
+
+header .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: #00F0FF !important;
+}
+
+header .dropdown-item strong {
+  color: #FFFFFF !important;
+}
+
+header .dropdown-item span {
+  color: #9CA3AF !important;
+}
+
+header .dropdown-menu .border-slate-100 {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #9CA3AF !important;
+}
+
+/* Mobile Drawer in Dark Header */
+header #mobile-drawer {
+  background: #0B0F19 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+header #mobile-drawer .nav-btn {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+header #mobile-drawer .nav-btn:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: #00F0FF !important;
+}
+
+#mobile-menu-toggle {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  color: #FFFFFF !important;
+  background-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+#mobile-menu-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Theme Toggle Button in Header */
+.theme-toggle-btn {
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle-btn:hover {
+  border-color: rgba(0, 240, 255, 0.4) !important;
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.2);
+}
+
+.theme-toggle-btn:active {
+  transform: scale(0.96);
+}
+
+footer {
+  background: rgba(255, 255, 255, 0.82) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Form Inputs with Soft Glass Feel */
+.clean-input {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(209, 213, 219, 0.9);
+  color: var(--text-primary);
+  border-radius: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.clean-input:focus {
+  outline: none;
+  background: #FFFFFF;
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* ==========================================================================
+   BUTTONS: CLEAR COLOR CHANGE ON PRESS / ACTIVE STATE
+   ========================================================================== */
+
+/* Primary Button */
+.btn-primary {
+  background-color: var(--btn-default-bg);
+  color: #FFFFFF;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  border: 1px solid transparent;
+  transition: all 0.15s ease;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-primary:hover {
+  background-color: var(--btn-default-hover);
+}
+
+/* Distinct visual change when pressed */
+.btn-primary:active,
+.btn-primary.is-active {
+  background-color: var(--accent-blue) !important;
+  color: #FFFFFF !important;
+  transform: scale(0.98);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 0 3px rgba(37, 99, 235, 0.25) !important;
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background-color: #FFFFFF;
+  color: var(--text-primary);
+  font-weight: 600;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-medium);
+  transition: all 0.15s ease;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-secondary:hover {
+  background-color: #F3F4F6;
+  border-color: #9CA3AF;
+}
+
+.btn-secondary:active,
+.btn-secondary.is-active {
+  background-color: #EFF6FF !important;
+  border-color: var(--accent-blue) !important;
+  color: var(--accent-blue) !important;
+  transform: scale(0.98);
+  box-shadow: inset 0 2px 4px rgba(37, 99, 235, 0.1) !important;
+}
+
+/* Navigation Links / Buttons */
+.nav-btn {
+  color: var(--text-secondary);
+  font-weight: 500;
+  padding: 0.5rem 0.85rem;
+  border-radius: 0.5rem;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.nav-btn:hover {
+  color: var(--text-primary);
+  background-color: #F3F4F6;
+}
+
+.nav-btn:active,
+.nav-btn.active-nav {
+  color: var(--accent-blue) !important;
+  background-color: #EFF6FF !important;
+  font-weight: 700;
+}
+
+/* WhatsApp Button */
+.btn-whatsapp {
+  background-color: #10B981;
+  color: #FFFFFF;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-whatsapp:hover {
+  background-color: #059669;
+}
+
+.btn-whatsapp:active {
+  background-color: #047857 !important;
+  transform: scale(0.98);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Toast Notifications */
+#toast-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  pointer-events: none;
+}
+
+.toast {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1.25rem;
+  background: #111827;
+  color: #FFFFFF;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.25);
+  font-size: 0.875rem;
+  animation: toast-fade 0.25s ease-out;
+}
+
+@keyframes toast-fade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dropdown Menu styling with Glass Elevation */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 0.85rem;
+  box-shadow: 0 16px 36px -6px rgba(15, 23, 42, 0.12), 0 4px 12px -2px rgba(15, 23, 42, 0.05);
+  padding: 0.5rem;
+  min-width: 280px;
+  display: none;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.65rem 0.85rem;
+  border-radius: 0.5rem;
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.dropdown-item:hover {
+  background-color: #F8F9FA;
+  color: var(--accent-blue);
+}
+
+.dropdown-item:active,
+.dropdown-item.active {
+  background-color: #EFF6FF;
+  color: var(--accent-blue);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   MODO NOCHE (DARK MODE THEME SYSTEM)
+   Paleta: Grises profundos #0B0F19 / #111827, Tarjetas de Grafito Oscuro,
+           Textos en Blanco Suave #F3F4F6 / Gris Claro #D1D5DB,
+           Acentos en Azul Cian Neuronal #00F0FF y Violeta Cuántico #7000FF.
+   ========================================================================== */
+
+html.dark,
+body.dark {
+  background: radial-gradient(circle at 15% 15%, #151D2D 0%, #0D131F 40%, #080C14 100%) !important;
+  background-attachment: fixed !important;
+  color: #F3F4F6 !important;
+}
+
+/* Dark Mode Bas-Relief Architectural Background */
+html.dark #architectural-bas-relief-bg {
+  opacity: 0.85;
+}
+
+html.dark #architectural-facets polygon {
+  fill: #0F172A !important;
+  stroke: rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark #isometric-prisms polygon[fill*="prism-top"] {
+  fill: #1E293B !important;
+  stroke: rgba(255, 255, 255, 0.25) !important;
+}
+
+html.dark #isometric-prisms polygon[fill*="prism-left"] {
+  fill: #0F172A !important;
+  stroke: rgba(255, 255, 255, 0.1) !important;
+}
+
+html.dark #isometric-prisms polygon[fill*="prism-right"] {
+  fill: #0A0F1D !important;
+  stroke: rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark #concentric-rings circle {
+  stroke: rgba(255, 255, 255, 0.12) !important;
+}
+
+html.dark #topographic-waves path {
+  fill: rgba(15, 23, 42, 0.45) !important;
+  stroke: rgba(0, 240, 255, 0.22) !important;
+}
+
+html.dark #micro-grid {
+  opacity: 0.25;
+}
+
+html.dark #micro-grid text {
+  fill: rgba(148, 163, 184, 0.6) !important;
+}
+
+/* Dark Mode Cards (Glassmorphism Oscuro con Resplandor) */
+html.dark .clean-card {
+  background: rgba(15, 23, 42, 0.82) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.55) !important;
+  color: #F3F4F6 !important;
+}
+
+html.dark .clean-card:hover {
+  background: rgba(17, 24, 39, 0.95) !important;
+  border-color: rgba(0, 240, 255, 0.35) !important;
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.7), 0 0 15px rgba(0, 240, 255, 0.12) !important;
+}
+
+/* ==========================================================================
+   MODO NOCHE: TODAS LAS LETRAS GRISES PASAN A BLANCO PURO (#FFFFFF)
+   Regla Universal: Cero grises en modo noche; todo el texto es 100% blanco.
+   ========================================================================== */
+
+html.dark,
+html.dark body,
+html.dark main,
+html.dark section,
+html.dark header,
+html.dark footer,
+html.dark nav,
+html.dark div,
+html.dark p,
+html.dark span,
+html.dark a,
+html.dark button,
+html.dark input,
+html.dark textarea,
+html.dark select,
+html.dark label,
+html.dark li,
+html.dark ul,
+html.dark ol,
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark h4,
+html.dark h5,
+html.dark h6,
+html.dark small,
+html.dark strong,
+html.dark b,
+html.dark i,
+html.dark em,
+html.dark code,
+html.dark blockquote,
+html.dark table,
+html.dark tr,
+html.dark td,
+html.dark th,
+html.dark .font-heading,
+html.dark .font-mono-clean,
+html.dark [class*="text-slate"],
+html.dark [class*="text-gray"],
+html.dark [class*="text-zinc"],
+html.dark [class*="text-neutral"],
+html.dark [class*="text-[#"] {
+  color: #FFFFFF !important;
+}
+
+/* Cualquier elemento hijo dentro de tarjetas o contenedores en Modo Noche */
+html.dark .clean-card,
+html.dark .clean-card *,
+html.dark .clean-card p,
+html.dark .clean-card span,
+html.dark .clean-card div,
+html.dark .clean-card li,
+html.dark .clean-card small,
+html.dark .clean-card strong,
+html.dark .clean-card b {
+  color: #FFFFFF !important;
+}
+
+/* Asegurar que los contenedores que en modo claro tenían fondo blanco/grisáceo sean legibles */
+html.dark .bg-slate-50,
+html.dark .bg-slate-100,
+html.dark .bg-white {
+  background-color: rgba(22, 30, 49, 0.88) !important;
+  color: #FFFFFF !important;
+}
+
+html.dark .bg-slate-50 *,
+html.dark .bg-slate-100 *,
+html.dark .bg-white * {
+  color: #FFFFFF !important;
+}
+
+html.dark .border-slate-100,
+html.dark .border-slate-200,
+html.dark .border-[#E5E7EB] {
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Excepciones de acento luminiscente para métricas y enlaces clave */
+html.dark [class*="text-blue"],
+html.dark .text-\[\#2563EB\] {
+  color: #38BDF8 !important;
+}
+
+html.dark [class*="text-cyan"] {
+  color: #00F0FF !important;
+}
+
+html.dark [class*="text-emerald"],
+html.dark [class*="text-green"] {
+  color: #34D399 !important;
+}
+
+html.dark [class*="text-purple"],
+html.dark [class*="text-violet"],
+html.dark [class*="text-indigo"] {
+  color: #C084FC !important;
+}
+
+html.dark [class*="text-pink"] {
+  color: #F472B6 !important;
+}
+
+html.dark [class*="text-amber"] {
+  color: #FBBF24 !important;
+}
+
+/* Badges con texto nítido iluminado */
+html.dark .bg-blue-50,
+html.dark .bg-blue-100 {
+  background-color: rgba(37, 99, 235, 0.3) !important;
+  color: #BAE6FD !important;
+  border-color: rgba(56, 189, 248, 0.4) !important;
+}
+html.dark .bg-blue-50 *,
+html.dark .bg-blue-100 * {
+  color: #BAE6FD !important;
+}
+
+html.dark .bg-purple-50,
+html.dark .bg-purple-100 {
+  background-color: rgba(147, 51, 234, 0.3) !important;
+  color: #E9D5FF !important;
+  border-color: rgba(192, 132, 252, 0.4) !important;
+}
+html.dark .bg-purple-50 *,
+html.dark .bg-purple-100 * {
+  color: #E9D5FF !important;
+}
+
+html.dark .bg-emerald-50,
+html.dark .bg-emerald-100 {
+  background-color: rgba(16, 185, 129, 0.3) !important;
+  color: #A7F3D0 !important;
+  border-color: rgba(52, 211, 153, 0.4) !important;
+}
+html.dark .bg-emerald-50 *,
+html.dark .bg-emerald-100 * {
+  color: #A7F3D0 !important;
+}
+
+html.dark .bg-pink-50,
+html.dark .bg-pink-100 {
+  background-color: rgba(236, 72, 153, 0.3) !important;
+  color: #FBCFE8 !important;
+  border-color: rgba(244, 114, 182, 0.4) !important;
+}
+html.dark .bg-pink-50 *,
+html.dark .bg-pink-100 * {
+  color: #FBCFE8 !important;
+}
+
+/* Inputs en Modo Noche */
+html.dark .clean-input {
+  background: rgba(15, 23, 42, 0.92) !important;
+  color: #FFFFFF !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+html.dark .clean-input::placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+html.dark .clean-input:focus {
+  background: #0B0F19 !important;
+  border-color: #00F0FF !important;
+  box-shadow: 0 0 0 3px rgba(0, 240, 255, 0.25) !important;
+}
+
+/* Botones secundarios en Modo Noche */
+html.dark .btn-secondary {
+  background-color: rgba(30, 41, 59, 0.85) !important;
+  color: #FFFFFF !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+html.dark .btn-secondary:hover {
+  background-color: rgba(51, 65, 85, 0.95) !important;
+  border-color: #00F0FF !important;
+  color: #FFFFFF !important;
+}
+
+/* Footer en Modo Noche */
+html.dark footer,
+html.dark footer * {
+  color: #FFFFFF !important;
+}
+
+html.dark footer {
+  background: #0B0F19 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+html.dark footer button:hover {
+  color: #00F0FF !important;
+}
+
+/* Modal técnico en Modo Noche */
+html.dark #specs-modal-content,
+html.dark #specs-modal-content * {
+  background-color: #0B0F19 !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  color: #FFFFFF !important;
+}

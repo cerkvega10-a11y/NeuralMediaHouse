@@ -1,0 +1,1693 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neural Media House | Firma Tecnológica y Casa Productora Matriz</title>
+  <meta name="description" content="Neural Media House: Arquitectura de Inteligencia Artificial Aplicada, Ingeniería de Software Propietaria y Producción Broadcast de Alta Fidelidad. Sede en Santa Fe, CDMX.">
+  
+  <!-- Tailwind CSS CDN & Dark Mode Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+
+  <!-- Google Fonts: Outfit, Plus Jakarta Sans, Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Minimalist Executive Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <!-- Dark Mode Universal Pure White Text Override -->
+  <style id="dark-mode-pure-white-override">
+    html.dark body,
+    html.dark main,
+    html.dark section,
+    html.dark article,
+    html.dark div,
+    html.dark p,
+    html.dark span,
+    html.dark a,
+    html.dark button,
+    html.dark li,
+    html.dark label,
+    html.dark small,
+    html.dark strong,
+    html.dark b,
+    html.dark h1,
+    html.dark h2,
+    html.dark h3,
+    html.dark h4,
+    html.dark h5,
+    html.dark h6,
+    html.dark .font-heading,
+    html.dark .font-mono-clean,
+    html.dark [class*="text-slate"],
+    html.dark [class*="text-gray"],
+    html.dark [class*="text-zinc"],
+    html.dark [class*="text-neutral"],
+    html.dark [class*="text-[#"] {
+      color: #FFFFFF !important;
+    }
+    html.dark [class*="text-blue"],
+    html.dark .text-\[\#2563EB\] {
+      color: #38BDF8 !important;
+    }
+    html.dark [class*="text-cyan"] {
+      color: #00F0FF !important;
+    }
+    html.dark [class*="text-emerald"],
+    html.dark [class*="text-green"] {
+      color: #34D399 !important;
+    }
+    html.dark [class*="text-purple"],
+    html.dark [class*="text-violet"],
+    html.dark [class*="text-indigo"] {
+      color: #C084FC !important;
+    }
+    html.dark [class*="text-pink"] {
+      color: #F472B6 !important;
+    }
+    html.dark [class*="text-amber"] {
+      color: #FBBF24 !important;
+    }
+  </style>
+</head>
+<body class="text-[#111827] min-h-screen flex flex-col font-sans relative">
+
+  <!-- ========================================================
+       FONDO ARQUITECTÓNICO EN RELIEVE (EXECUTIVE 3D BAS-RELIEF)
+       Fijo e inalterable detrás de todas las vistas
+       ======================================================== -->
+  <div id="architectural-bas-relief-bg" class="fixed inset-0 pointer-events-none z-[-1] overflow-hidden" aria-hidden="true">
+    <svg class="w-full h-full object-cover" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <!-- Filtro Neumórfico Doble: Sombra Profunda + Luz Blanca en Relieve -->
+        <filter id="relief-emboss-deep" x="-25%" y="-25%" width="160%" height="160%">
+          <feDropShadow dx="12" dy="16" stdDeviation="14" flood-color="rgba(163, 177, 198, 0.45)" />
+          <feDropShadow dx="-8" dy="-8" stdDeviation="12" flood-color="rgba(255, 255, 255, 0.95)" />
+        </filter>
+        
+        <filter id="relief-emboss-soft" x="-25%" y="-25%" width="160%" height="160%">
+          <feDropShadow dx="7" dy="9" stdDeviation="9" flood-color="rgba(163, 177, 198, 0.38)" />
+          <feDropShadow dx="-5" dy="-5" stdDeviation="7" flood-color="rgba(255, 255, 255, 0.92)" />
+        </filter>
+
+        <!-- Gradientes de Escultura y Bajorrelieve -->
+        <linearGradient id="facet-w-1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95" />
+          <stop offset="50%" stop-color="#ECEEF2" stop-opacity="0.85" />
+          <stop offset="100%" stop-color="#DDE1E7" stop-opacity="0.75" />
+        </linearGradient>
+
+        <linearGradient id="facet-w-2" x1="100%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9" />
+          <stop offset="100%" stop-color="#D8DEE7" stop-opacity="0.8" />
+        </linearGradient>
+
+        <linearGradient id="facet-w-3" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#F2F4F7" stop-opacity="0.9" />
+          <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.98" />
+        </linearGradient>
+
+        <!-- Gradientes para Prismas Isométricos -->
+        <linearGradient id="prism-top" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#FFFFFF" />
+          <stop offset="100%" stop-color="#F0F3F7" />
+        </linearGradient>
+        <linearGradient id="prism-left" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#ECEFF4" />
+          <stop offset="100%" stop-color="#D9DFEA" />
+        </linearGradient>
+        <linearGradient id="prism-right" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#DEE3EC" />
+          <stop offset="100%" stop-color="#CBD3DE" />
+        </linearGradient>
+
+        <!-- Ondas Esculturales y Luz Topográfica -->
+        <linearGradient id="topo-grad-1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.55" />
+          <stop offset="50%" stop-color="#EEF1F5" stop-opacity="0.35" />
+          <stop offset="100%" stop-color="#E2E8F0" stop-opacity="0.15" />
+        </linearGradient>
+
+        <linearGradient id="topo-grad-2" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.5" />
+          <stop offset="60%" stop-color="#E5EAF1" stop-opacity="0.25" />
+          <stop offset="100%" stop-color="#D2D9E3" stop-opacity="0.1" />
+        </linearGradient>
+      </defs>
+
+      <!-- CAPA 1: FACETAS GEOMÉTRICAS Y POLÍGONOS EN BAJORRELIEVE (ORIGAMI ARQUITECTÓNICO) -->
+      <g id="architectural-facets">
+        <!-- Esquina Superior Derecha: Grandes Facetas Esculpidas -->
+        <polygon points="1120,0 1920,0 1920,380 1520,260" fill="url(#facet-w-1)" stroke="rgba(255,255,255,0.95)" stroke-width="1.5" filter="url(#relief-emboss-soft)" />
+        <polygon points="1520,260 1920,380 1800,680 1360,520" fill="url(#facet-w-2)" stroke="rgba(255,255,255,0.9)" stroke-width="1.5" filter="url(#relief-emboss-deep)" />
+        <polygon points="1120,0 1520,260 1360,520 960,280" fill="url(#facet-w-3)" stroke="rgba(255,255,255,0.95)" stroke-width="1" />
+
+        <!-- Esquina Inferior Izquierda: Facetas Angulares Esculpidas -->
+        <polygon points="0,580 480,500 380,890 0,990" fill="url(#facet-w-1)" stroke="rgba(255,255,255,0.95)" stroke-width="1.5" filter="url(#relief-emboss-deep)" />
+        <polygon points="380,890 480,500 820,720 620,1080 0,1080 0,990" fill="url(#facet-w-2)" stroke="rgba(255,255,255,0.85)" stroke-width="1.5" filter="url(#relief-emboss-soft)" />
+      </g>
+
+      <!-- CAPA 1.2: POLÍGONOS ISOMÉTRICOS & PRISMAS 3D (NEUMORPHIC SHAPES) -->
+      <g id="isometric-prisms">
+        <!-- Prisma Isométrico Superior Derecho (Cluster Principal) -->
+        <g filter="url(#relief-emboss-deep)">
+          <!-- Top Face (Luz Pura) -->
+          <polygon points="1640,250 1735,305 1640,360 1545,305" fill="url(#prism-top)" stroke="rgba(255,255,255,0.98)" stroke-width="1" />
+          <!-- Left Face (Sombra Media) -->
+          <polygon points="1545,305 1640,360 1640,470 1545,415" fill="url(#prism-left)" stroke="rgba(255,255,255,0.7)" stroke-width="0.5" />
+          <!-- Right Face (Sombra Profunda) -->
+          <polygon points="1640,360 1735,305 1735,415 1640,470" fill="url(#prism-right)" stroke="rgba(255,255,255,0.5)" stroke-width="0.5" />
+        </g>
+
+        <!-- Prisma Isométrico Satélite Superior -->
+        <g filter="url(#relief-emboss-soft)">
+          <polygon points="1780,440 1835,470 1780,500 1725,470" fill="url(#prism-top)" stroke="rgba(255,255,255,0.95)" stroke-width="1" />
+          <polygon points="1725,470 1780,500 1780,560 1725,530" fill="url(#prism-left)" />
+          <polygon points="1780,500 1835,470 1835,530 1780,560" fill="url(#prism-right)" />
+        </g>
+
+        <!-- Prisma Isométrico Inferior Izquierdo -->
+        <g filter="url(#relief-emboss-deep)">
+          <polygon points="260,670 335,715 260,760 185,715" fill="url(#prism-top)" stroke="rgba(255,255,255,0.98)" stroke-width="1" />
+          <polygon points="185,715 260,760 260,845 185,800" fill="url(#prism-left)" stroke="rgba(255,255,255,0.7)" stroke-width="0.5" />
+          <polygon points="260,760 335,715 335,800 260,845" fill="url(#prism-right)" stroke="rgba(255,255,255,0.5)" stroke-width="0.5" />
+        </g>
+      </g>
+
+      <!-- CAPA 1.3: CÍRCULOS CONCÉNTRICOS EN BAJORRELIEVE -->
+      <g id="concentric-rings">
+        <!-- Anillos Arquitectónicos Superior Izquierdo -->
+        <circle cx="280" cy="180" r="150" stroke="rgba(255,255,255,0.9)" stroke-width="2" fill="none" filter="url(#relief-emboss-soft)" />
+        <circle cx="280" cy="180" r="105" stroke="rgba(163,177,198,0.4)" stroke-width="1.5" stroke-dasharray="6 8" fill="none" />
+        <circle cx="280" cy="180" r="50" stroke="rgba(255,255,255,0.95)" stroke-width="1.2" fill="rgba(255,255,255,0.25)" filter="url(#relief-emboss-soft)" />
+
+        <!-- Anillos Arquitectónicos Inferior Derecho -->
+        <circle cx="1440" cy="790" r="190" stroke="rgba(255,255,255,0.85)" stroke-width="2" stroke-dasharray="12 10" fill="none" filter="url(#relief-emboss-soft)" />
+        <circle cx="1440" cy="790" r="120" stroke="rgba(255,255,255,0.92)" stroke-width="1.5" fill="none" />
+      </g>
+
+      <!-- CAPA 2: ONDAS TOPOGRÁFICAS DE LUZ BLANCA Y TEXTURA MICRO-TÉCNICA -->
+      <g id="topographic-waves">
+        <!-- Onda Topográfica Superior -->
+        <path d="M-100,240 C350,140 700,320 1150,220 C1500,140 1800,280 2050,200 L2050,420 C1750,520 1400,380 1050,480 C650,590 250,440 -100,560 Z" 
+              fill="url(#topo-grad-1)" 
+              stroke="rgba(255,255,255,0.85)" 
+              stroke-width="1.5" />
+
+        <!-- Onda Topográfica Inferior -->
+        <path d="M-50,720 C420,620 850,780 1300,660 C1650,560 1900,700 2050,640 L2050,920 C1700,1020 1350,880 900,980 C500,1070 150,920 -50,980 Z" 
+              fill="url(#topo-grad-2)" 
+              stroke="rgba(255,255,255,0.9)" 
+              stroke-width="1.5" />
+
+        <!-- Trazos Diagonales de Corte Escultórico -->
+        <line x1="380" y1="1080" x2="1460" y2="0" stroke="rgba(255,255,255,0.55)" stroke-width="1.2" stroke-dasharray="10 14" />
+        <line x1="780" y1="1080" x2="1860" y2="0" stroke="rgba(255,255,255,0.4)" stroke-width="1" />
+      </g>
+
+      <!-- CAPA 2.2: RETÍCULA MICRO-TÉCNICA DE PRECISIÓN Y COORDENADAS -->
+      <g id="micro-grid" opacity="0.38">
+        <!-- Cruces Arquitectónicas (+) -->
+        <g stroke="rgba(163,177,198,0.7)" stroke-width="1.2">
+          <path d="M300,295 V305 M295,300 H305" />
+          <path d="M600,195 V205 M595,200 H605" />
+          <path d="M900,345 V355 M895,350 H905" />
+          <path d="M1200,175 V185 M1195,180 H1205" />
+          <path d="M1500,295 V305 M1495,300 H1505" />
+          <path d="M450,745 V755 M445,750 H455" />
+          <path d="M750,845 V855 M745,850 H755" />
+          <path d="M1050,715 V725 M1045,720 H1055" />
+          <path d="M1350,815 V825 M1345,820 H1355" />
+          <path d="M1650,675 V685 M1645,680 H1655" />
+        </g>
+        <!-- Tipografía Técnica Micro -->
+        <text x="80" y="85" font-family="'JetBrains Mono', monospace" font-size="10" fill="rgba(100,116,139,0.5)" letter-spacing="2">ARCHITECTURAL BAS-RELIEF GRID // SFE-CDMX · LAT 19.3598° N</text>
+        <text x="1530" y="1040" font-family="'JetBrains Mono', monospace" font-size="10" fill="rgba(100,116,139,0.5)" letter-spacing="2">NEURAL MEDIA HOUSE // EXECUTIVE MATRIX</text>
+      </g>
+    </svg>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container"></div>
+
+  <!-- ========================================================
+       HEADER CORPORATIVO MINIMALISTA (FIXED & RESPONSIVE)
+       Tono Oscuro Ejecutivo #0B0F19 con Contraste Blanco Puro
+       ======================================================== -->
+  <header class="sticky top-0 z-40 header-dark transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo Oficial Neural Media House (Sin Fondo) -->
+      <a href="#home" data-view="home" class="flex items-center group cursor-pointer focus:outline-none py-1" aria-label="Ir a Inicio">
+        <img src="assets/logo.png" alt="Neural Media House" class="h-11 sm:h-12 w-auto object-contain transition-transform duration-200 group-hover:scale-105 filter drop-shadow-[0_0_12px_rgba(0,240,255,0.35)]">
+      </a>
+
+      <!-- Desktop Multi-Page Navigation Bar -->
+      <nav class="hidden lg:flex items-center gap-1.5 text-xs font-semibold">
+        <button data-view="home" class="nav-btn active-nav">Inicio</button>
+        <button data-view="quantum" class="nav-btn">Quantum Media House</button>
+        <button data-view="academia" class="nav-btn">Academia & Clases IA</button>
+        <button data-view="govtech" class="nav-btn">GovTech War Room</button>
+        <button data-view="broadcast" class="nav-btn">Broadcast & CCTV</button>
+
+        <!-- Dropdown: 6 Plataformas Propias -->
+        <div id="platforms-dropdown-container" class="relative">
+          <button id="platforms-dropdown-toggle" class="nav-btn flex items-center gap-1.5">
+            <span>Aplicaciones ▾</span>
+            <svg class="w-3.5 h-3.5 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          <div id="platforms-dropdown-menu" class="dropdown-menu">
+            <div class="px-3 py-1.5 text-[10px] font-mono-clean uppercase tracking-wider text-slate-400 border-b border-slate-100 mb-1">
+              Catálogo de Plataformas (6)
+            </div>
+            <a href="#app-govtech" data-view="app-govtech" class="dropdown-item">
+              <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+              <div>
+                <strong class="block text-xs">GovTech War Room</strong>
+                <span class="text-[11px] text-slate-400">Simulación predictiva con agentes sintéticos</span>
+              </div>
+            </a>
+            <a href="#app-neural" data-view="app-neural" class="dropdown-item">
+              <span class="w-2 h-2 rounded-full bg-purple-500"></span>
+              <div>
+                <strong class="block text-xs">Neural Inteligent</strong>
+                <span class="text-[11px] text-slate-400">Analítica open-weight y enjambres</span>
+              </div>
+            </a>
+            <a href="#app-lexcore" data-view="app-lexcore" class="dropdown-item">
+              <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
+              <div>
+                <strong class="block text-xs">LexCore AI</strong>
+                <span class="text-[11px] text-slate-400">LegalTech y Google Drive API</span>
+              </div>
+            </a>
+            <a href="#app-classroom" data-view="app-classroom" class="dropdown-item">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+              <div>
+                <strong class="block text-xs">Classroom IA</strong>
+                <span class="text-[11px] text-slate-400">EdTech y análisis forense anti-plagio</span>
+              </div>
+            </a>
+            <a href="#app-sandbox" data-view="app-sandbox" class="dropdown-item">
+              <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+              <div>
+                <strong class="block text-xs">Sandbox Learning</strong>
+                <span class="text-[11px] text-slate-400">Laboratorios 2D/3D en 6 materias</span>
+              </div>
+            </a>
+            <a href="#app-chess" data-view="app-chess" class="dropdown-item">
+              <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+              <div>
+                <strong class="block text-xs">Chess Titans 3D</strong>
+                <span class="text-[11px] text-slate-400">Ajedrez Three.js con Gemini AI</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <button data-view="contacto" class="nav-btn">Contacto</button>
+      </nav>
+
+      <!-- Right Action CTA & Theme Toggle -->
+      <div class="flex items-center gap-2.5 sm:gap-3">
+        <!-- Dark Mode Toggle Button (Modo Noche) -->
+        <button 
+          id="theme-toggle" 
+          class="theme-toggle-btn flex items-center gap-2 px-3 py-2 rounded-xl border border-white/20 bg-white/5 hover:bg-white/10 text-white transition-all text-xs font-semibold focus:outline-none"
+          aria-label="Alternar Modo Noche"
+          title="Alternar entre Modo Claro y Modo Noche"
+        >
+          <span class="theme-icon-container relative w-4 h-4 flex items-center justify-center">
+            <!-- Moon Icon -->
+            <svg id="moon-icon" class="w-4 h-4 text-cyan-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+            </svg>
+            <!-- Sun Icon (Hidden by default, shown in dark mode) -->
+            <svg id="sun-icon" class="w-4 h-4 text-amber-300 transition-transform duration-300 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            </svg>
+          </span>
+          <span id="theme-text" class="hidden sm:inline font-mono-clean text-[11px] tracking-wide text-white">Modo Noche</span>
+        </button>
+
+        <a 
+          href="https://wa.me/message/S2KVVW6AS7C6C1" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="btn-whatsapp px-4 py-2.5 text-xs font-semibold shadow-sm"
+        >
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.297.144.35.491 1.199.534 1.286.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086.159.058 1.011.477 1.184.564.173.087.289.13.332.202.043.072.043.419-.101.824z"/></svg>
+          <span class="hidden md:inline">WhatsApp Directo</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-toggle" class="lg:hidden p-2.5 rounded-lg border border-white/20 text-white hover:bg-white/10 focus:outline-none" aria-label="Abrir menú">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="hidden lg:hidden border-t border-white/10 bg-[#0B0F19] px-4 py-6 space-y-3">
+      <div class="flex items-center justify-between pb-3 border-b border-white/10">
+        <span class="text-xs font-mono-clean uppercase text-slate-400">Páginas de Navegación</span>
+        <button id="mobile-drawer-close" class="p-1 text-slate-400 hover:text-white">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+      <div class="flex flex-col gap-1 text-sm font-medium">
+        <button data-view="home" class="nav-btn text-left py-2">Inicio</button>
+        <button data-view="quantum" class="nav-btn text-left py-2">Quantum Media House</button>
+        <button data-view="academia" class="nav-btn text-left py-2">Academia & Clases IA</button>
+        <button data-view="govtech" class="nav-btn text-left py-2">GovTech War Room</button>
+        <button data-view="broadcast" class="nav-btn text-left py-2">Broadcast & CCTV</button>
+        <button data-view="contacto" class="nav-btn text-left py-2">Contacto Corporativo</button>
+        <div class="pt-2 border-t border-white/10">
+          <span class="text-xs font-mono-clean text-slate-400 block mb-1">6 Aplicaciones Propias:</span>
+          <div class="grid grid-cols-2 gap-1 pl-2">
+            <button data-view="app-govtech" class="text-left text-xs py-1.5 text-blue-400 font-semibold">• GovTech</button>
+            <button data-view="app-neural" class="text-left text-xs py-1.5 text-purple-400 font-semibold">• Neural Inteligent</button>
+            <button data-view="app-lexcore" class="text-left text-xs py-1.5 text-indigo-400 font-semibold">• LexCore AI</button>
+            <button data-view="app-classroom" class="text-left text-xs py-1.5 text-emerald-400 font-semibold">• Classroom IA</button>
+            <button data-view="app-sandbox" class="text-left text-xs py-1.5 text-amber-400 font-semibold">• Sandbox Learning</button>
+            <button data-view="app-chess" class="text-left text-xs py-1.5 text-cyan-400 font-semibold">• Chess Titans 3D</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================
+       MAIN ROUTER CONTAINER (PÁGINAS INDEPENDIENTES)
+       ======================================================== -->
+  <main class="flex-grow">
+
+    <!-- ========================================================
+         VIEW 1: INICIO (HOME - SOLO IDENTIDAD ESENCIAL)
+         ======================================================== -->
+    <section id="view-home" class="view-page py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      
+      <!-- Minimalist Hero Header -->
+      <div class="max-w-4xl mx-auto text-center mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E5E7EB] text-xs font-mono-clean text-[#4B5563] shadow-sm mb-6">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          <span>Santa Fe, Ciudad de México</span>
+          <span class="text-slate-300">|</span>
+          <span class="font-semibold text-slate-800">Firma Tecnológica Matriz</span>
+        </div>
+
+        <!-- Logotipo Oficial Showcase (Sin Fondo) -->
+        <div class="flex justify-center mb-10">
+          <div class="max-w-md sm:max-w-lg w-full flex justify-center py-2">
+            <img 
+              src="assets/logo.png" 
+              alt="Logotipo Oficial Neural Media House" 
+              class="w-full max-h-36 sm:max-h-44 object-contain filter drop-shadow-[0_2px_10px_rgba(15,23,42,0.22)] transition-transform duration-300 hover:scale-[1.02]"
+            >
+          </div>
+        </div>
+
+        <h1 class="text-4xl sm:text-6xl font-extrabold font-heading text-[#111827] tracking-tight leading-[1.15] mb-6">
+          Neural Media House
+        </h1>
+
+        <p class="text-lg sm:text-xl text-[#4B5563] leading-relaxed max-w-3xl mx-auto mb-8">
+          Firma tecnológica y casa productora matriz que converge la producción audiovisual de nivel broadcast, la ingeniería de software avanzada, el desarrollo de plataformas SaaS, la formación académica de alto rendimiento y la Inteligencia Artificial aplicada.
+        </p>
+
+        <!-- Reproductor Institucional de Video (Google Drive Embed) -->
+        <div class="w-full max-w-4xl mx-auto my-8 rounded-2xl overflow-hidden shadow-xl border border-gray-200 dark:border-gray-800 bg-black/5 dark:bg-white/5 aspect-video" style="aspect-ratio: 16 / 9; min-height: 320px; width: 100%;">
+          <iframe 
+            src="https://drive.google.com/file/d/1dkVpx9QthH42rBVtIqKxxv3QMd3UbSKd/preview" 
+            class="w-full h-full border-0" 
+            style="width: 100%; height: 100%; border: 0;"
+            allow="autoplay; fullscreen" 
+            allowfullscreen
+            title="Video Institucional Neural Media House"
+          ></iframe>
+        </div>
+
+        <!-- CTAs Principales con Cambio Evidente de Color -->
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <button data-view="quantum" class="btn-primary px-7 py-3.5 text-sm">
+            <span>Explorar Divisiones</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </button>
+          <button data-view="app-govtech" class="btn-secondary px-7 py-3.5 text-sm">
+            <span>Ver Menú de Aplicaciones</span>
+          </button>
+          <button data-view="contacto" class="btn-secondary px-7 py-3.5 text-sm">
+            <span>Contacto Directo</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Minimalist Key Metrics Grid (4) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+        <div class="clean-card p-6">
+          <div class="text-xs font-mono-clean text-blue-600 font-semibold uppercase tracking-wider mb-2">Reconocimiento</div>
+          <div class="text-3xl font-extrabold font-heading text-[#111827]">Finalista</div>
+          <div class="text-sm font-semibold text-slate-700 mt-1">Best CEO Awards 2026</div>
+          <p class="text-xs text-slate-500 mt-1">Reconocimiento como Finalista en la categoría Best CEO Leadership.</p>
+        </div>
+
+        <div class="clean-card p-6">
+          <div class="text-xs font-mono-clean text-emerald-600 font-semibold uppercase tracking-wider mb-2">Cátedra Directa</div>
+          <div class="text-3xl font-extrabold font-heading text-[#111827]">+100 Alumnos Formados</div>
+          <div class="text-sm font-semibold text-slate-700 mt-1">En IA Generativa & Desarrollo con IA</div>
+          <p class="text-xs text-slate-500 mt-1">Google Antigravity, UAM Azcapotzalco e ICEMéxico.</p>
+        </div>
+
+        <div class="clean-card p-6">
+          <div class="text-xs font-mono-clean text-purple-600 font-semibold uppercase tracking-wider mb-2">Ingeniería</div>
+          <div class="text-3xl font-extrabold font-heading text-[#111827]">6 Aplicaciones Propias</div>
+          <div class="text-sm font-semibold text-slate-700 mt-1">Software y SaaS de Alto Rendimiento</div>
+          <p class="text-xs text-slate-500 mt-1">GovTech, LegalTech, EdTech y Simulación 3D.</p>
+        </div>
+
+        <div class="clean-card p-6">
+          <div class="text-xs font-mono-clean text-slate-600 font-semibold uppercase tracking-wider mb-2">Sede Central</div>
+          <div class="text-3xl font-extrabold font-heading text-[#111827]">Santa Fe</div>
+          <div class="text-sm font-semibold text-slate-700 mt-1">Ciudad de México (CDMX)</div>
+          <p class="text-xs text-slate-500 mt-1">Calle Guillermo González Camarena 900-B.</p>
+        </div>
+      </div>
+
+      <!-- Liderazgo Corporativo (Erick Vega & Aland) -->
+      <div class="mb-20">
+        <div class="text-center max-w-xl mx-auto mb-10">
+          <span class="text-xs font-mono-clean text-blue-600 uppercase tracking-wider font-semibold">Gobierno Corporativo</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold font-heading text-[#111827] mt-1">Estructura Directiva</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <!-- Erick Vega -->
+          <div class="clean-card p-8 flex flex-col justify-between">
+            <div>
+              <span class="inline-block px-3 py-1 text-xs font-mono-clean rounded-full bg-blue-50 text-blue-700 font-semibold mb-3">
+                Chief Executive Officer
+              </span>
+              <h3 class="text-2xl font-bold font-heading text-[#111827]">Erick Vega</h3>
+              <div class="text-sm font-semibold text-slate-600 mb-4">CEO, Director General y Productor Ejecutivo</div>
+              <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                Lidera la visión estratégica corporativa, la arquitectura de IA Generativa, el modelado matemático/físico para simulaciones complejas, la dirección audiovisual y la cátedra académica de especialización en IA (+100 profesionales y universitarios formados directamente).
+              </p>
+              <div class="p-3.5 rounded-lg bg-slate-50 border border-slate-100 text-xs text-slate-600 space-y-2">
+                <div><strong>Formación:</strong> Líder en Inteligencia Artificial y Producción Audiovisual.</div>
+                <div><strong>Certificaciones:</strong> Líder en Inteligencia Artificial Generativa certificado por Google, Ética en Inteligencia Artificial por la Universidad de Michigan y Ciberseguridad con Inteligencia Artificial por la Universidad Johns Hopkins.</div>
+              </div>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-mono-clean text-slate-500 flex items-center justify-between">
+              <span>Finalista Best CEO Awards 2026</span>
+              <span class="text-blue-600 font-bold">Best CEO Leadership</span>
+            </div>
+          </div>
+
+          <!-- Aland -->
+          <div class="clean-card p-8 flex flex-col justify-between">
+            <div>
+              <span class="inline-block px-3 py-1 text-xs font-mono-clean rounded-full bg-purple-50 text-purple-700 font-semibold mb-3">
+                Chief Operating Officer
+              </span>
+              <h3 class="text-2xl font-bold font-heading text-[#111827]">Aland</h3>
+              <div class="text-sm font-semibold text-slate-600 mb-4">Director de Operaciones (COO)</div>
+              <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                Encargado de la logística corporativa, la gestión de proyectos de alta criticidad, la ejecución operativa integral y la escalabilidad sostenible de los servicios y divisiones de la firma.
+              </p>
+              <div class="p-3.5 rounded-lg bg-slate-50 border border-slate-100 text-xs text-slate-600 space-y-1">
+                <div><strong>Áreas de Responsabilidad:</strong> Logística corporativa transversal y gestión de proyectos.</div>
+                <div><strong>Enfoque Operativo:</strong> Calidad de entrega, plazos críticos y escalamiento de servicios institucionales.</div>
+              </div>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-mono-clean text-slate-500 flex items-center justify-between">
+              <span>Operaciones Corporativas</span>
+              <span class="text-purple-600 font-bold">Dirección Operativa</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navegación a las Páginas de Divisiones -->
+      <div class="border-t border-[#E5E7EB] pt-16">
+        <div class="text-center max-w-xl mx-auto mb-10">
+          <span class="text-xs font-mono-clean text-[#6B7280] uppercase tracking-wider font-semibold">Divisiones Independientes</span>
+          <h2 class="text-2xl font-bold font-heading text-[#111827] mt-1">Explora Cada Área en su Vista Dedicada</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <button data-view="quantum" class="clean-card p-6 text-left group hover:border-blue-400">
+            <span class="text-2xl block mb-2">🧠</span>
+            <h3 class="text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Quantum Media House</h3>
+            <p class="text-xs text-slate-500 mt-1">Automatización de IA para Redes Sociales (FB, IG, TikTok), multi-agentes y Caramelo Media Music.</p>
+            <span class="text-xs font-semibold text-blue-600 mt-4 block">Abrir página &rarr;</span>
+          </button>
+
+          <button data-view="academia" class="clean-card p-6 text-left group hover:border-blue-400">
+            <span class="text-2xl block mb-2">🎓</span>
+            <h3 class="text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Academia & Clases IA</h3>
+            <p class="text-xs text-slate-500 mt-1">Cursos Google Antigravity, UAM Azcapotzalco y +100 profesionales formados.</p>
+            <span class="text-xs font-semibold text-blue-600 mt-4 block">Abrir página &rarr;</span>
+          </button>
+
+          <button data-view="govtech" class="clean-card p-6 text-left group hover:border-blue-400">
+            <span class="text-2xl block mb-2">🏛️</span>
+            <h3 class="text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors">GovTech War Room</h3>
+            <p class="text-xs text-slate-500 mt-1">SaaS de alta disponibilidad, enjambres de agentes gemelos y cruce INEGI/INE.</p>
+            <span class="text-xs font-semibold text-blue-600 mt-4 block">Abrir página &rarr;</span>
+          </button>
+
+          <button data-view="broadcast" class="clean-card p-6 text-left group hover:border-blue-400">
+            <span class="text-2xl block mb-2">🎥</span>
+            <h3 class="text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Broadcast & CCTV</h3>
+            <p class="text-xs text-slate-500 mt-1">Realización cinematográfica, DaVinci Resolve, FL Studio y transmisión de alto nivel.</p>
+            <span class="text-xs font-semibold text-blue-600 mt-4 block">Abrir página &rarr;</span>
+          </button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================================
+         VIEW 2: QUANTUM MEDIA HOUSE (CÓMO APLICAR IA A TU NEGOCIO)
+         ======================================================== -->
+    <section id="view-quantum" class="view-page hidden py-16 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      
+      <!-- Back Link -->
+      <button data-view="home" class="btn-secondary px-3.5 py-1.5 text-xs mb-8">
+        &larr; Volver a Inicio
+      </button>
+
+      <div class="mb-12">
+        <span class="px-3 py-1 rounded-full text-xs font-mono-clean bg-blue-50 text-blue-700 font-semibold mb-3 inline-block">
+          División de Integración Estratégica
+        </span>
+        <h1 class="text-3xl sm:text-5xl font-extrabold font-heading text-[#111827] tracking-tight mb-4">
+          Quantum Media House
+        </h1>
+        <p class="text-lg text-slate-600 leading-relaxed max-w-3xl">
+          Brazo consultor de Neural Media House. Diseñamos e integramos arquitecturas de Inteligencia Artificial prácticas, seguras y medibles para transformar la productividad de tu negocio.
+        </p>
+      </div>
+
+      <!-- Core Capabilities Grid -->
+      <div class="space-y-8 mb-16">
+        
+        <!-- SERVICIO FUNDAMENTAL: AUTOMATIZACIÓN DE INTELIGENCIA ARTIFICIAL PARA REDES SOCIALES (FACEBOOK, INSTAGRAM Y TIKTOK) -->
+        <div class="clean-card p-8 sm:p-10 border-2 border-blue-500 bg-gradient-to-br from-white via-blue-50/25 to-white shadow-md relative overflow-hidden">
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+            <span class="px-3 py-1 rounded-full text-xs font-mono-clean bg-blue-600 text-white font-bold tracking-wider uppercase">
+              ★ Servicio Fundamental de IA
+            </span>
+            <span class="text-xs font-mono-clean text-blue-700 font-bold bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+              Operación Ininterrumpida 24/7
+            </span>
+          </div>
+
+          <h2 class="text-2xl sm:text-3xl font-extrabold font-heading text-[#111827] mb-3">
+            Automatización de Inteligencia Artificial para Redes Sociales (Facebook, Instagram y TikTok)
+          </h2>
+
+          <p class="text-base text-slate-700 leading-relaxed mb-8 max-w-3xl">
+            Neural Media House diseña, entrena y despliega flujos conversacionales y agentes de inteligencia artificial de última generación conectados directamente a las plataformas sociales de mayor impacto (<strong>Facebook, Instagram y TikTok</strong>), optimizando la operación digital de marcas, empresas, creadores y proyectos políticos:
+          </p>
+
+          <!-- 4 Pilares Clave de Automatización en Redes Sociales -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div class="p-5 rounded-xl bg-white border border-slate-200 shadow-xs">
+              <div class="flex items-center gap-2.5 mb-2">
+                <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+                <h3 class="text-sm font-bold font-heading text-slate-900">Respuesta Automática Inteligente 24/7</h3>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Agentes entrenados a la medida para contestar de forma inmediata, natural y contextualizada mensajes directos y comentarios en Facebook, Instagram y TikTok sin intervención humana, reduciendo los tiempos de atención a cero.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-xl bg-white border border-slate-200 shadow-xs">
+              <div class="flex items-center gap-2.5 mb-2">
+                <span class="w-3 h-3 rounded-full bg-blue-500"></span>
+                <h3 class="text-sm font-bold font-heading text-slate-900">Segmentación y Clasificación de Audiencias</h3>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Análisis algorítmico en tiempo real de las interacciones para clasificar prospectos, detectar intención de compra o interés político y filtrar leads cualificados de manera automatizada.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-xl bg-white border border-slate-200 shadow-xs">
+              <div class="flex items-center gap-2.5 mb-2">
+                <span class="w-3 h-3 rounded-full bg-purple-500"></span>
+                <h3 class="text-sm font-bold font-heading text-slate-900">Generación de Leads y Conversión de Seguidores (Followers)</h3>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Flujos diseñados estratégicamente para capturar datos de contacto, guiar al usuario a embudos de venta o registros, y transformar la interacción casual en oportunidades de negocio reales.
+              </p>
+            </div>
+
+            <div class="p-5 rounded-xl bg-white border border-slate-200 shadow-xs">
+              <div class="flex items-center gap-2.5 mb-2">
+                <span class="w-3 h-3 rounded-full bg-cyan-500"></span>
+                <h3 class="text-sm font-bold font-heading text-slate-900">Optimización y Crecimiento de Audiencia</h3>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Automatización de flujos conversacionales orientados a incrementar la retención, fomentar la interacción orgánica, responder menciones masivas y potenciar el crecimiento de seguidores en todas las plataformas mencionadas.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-2 text-xs font-mono-clean pt-4 border-t border-blue-100">
+            <span class="px-2.5 py-1 bg-blue-100 text-blue-800 rounded font-semibold">Facebook Messenger & Comentarios</span>
+            <span class="px-2.5 py-1 bg-pink-100 text-pink-800 rounded font-semibold">Instagram DM & Stories</span>
+            <span class="px-2.5 py-1 bg-slate-100 text-slate-800 rounded font-semibold">TikTok Direct & Live Chat</span>
+            <span class="px-2.5 py-1 bg-emerald-100 text-emerald-800 rounded font-semibold">Captura Automatizada de Leads</span>
+            <span class="px-2.5 py-1 bg-purple-100 text-purple-800 rounded font-semibold">Conversión 24/7 sin Fricción</span>
+          </div>
+        </div>
+        
+        <!-- Orquestación Multi-Agente -->
+        <div class="clean-card p-8">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-lg">01</div>
+            <h2 class="text-xl font-bold font-heading text-[#111827]">Consultoría y Arquitectura de Sistemas Multi-Agente</h2>
+          </div>
+          <p class="text-slate-600 text-sm leading-relaxed mb-6">
+            Diseñamos flujos operativos gobernados por enjambres de agentes autónomos especializados interconectados:
+          </p>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs font-mono-clean mb-6">
+            <div class="p-3 bg-slate-50 rounded-lg border border-slate-100">
+              <span class="text-blue-600 font-bold block mb-1">Trend Scout</span>
+              Vigilancia de mercado
+            </div>
+            <div class="p-3 bg-slate-50 rounded-lg border border-slate-100">
+              <span class="text-purple-600 font-bold block mb-1">Creative Director</span>
+              Ideación de copys y assets
+            </div>
+            <div class="p-3 bg-slate-50 rounded-lg border border-slate-100">
+              <span class="text-emerald-600 font-bold block mb-1">Community Mgr</span>
+              Atención y engagement
+            </div>
+            <div class="p-3 bg-slate-50 rounded-lg border border-slate-100">
+              <span class="text-amber-600 font-bold block mb-1">QA Inspector</span>
+              Auditoría y precisión
+            </div>
+          </div>
+          <p class="text-xs text-slate-500">
+            Conectados bidireccionalmente vía API con WhatsApp empresarial, Google Calendar, bases de datos y CRM corporativos.
+          </p>
+        </div>
+
+        <!-- Transformación Digital & Gobernanza -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="clean-card p-6">
+            <h3 class="text-lg font-bold font-heading text-[#111827] mb-2">Transformación Digital & LLMs</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Auditoría exhaustiva e implementación de modelos de lenguaje para automatizar la generación de reportes y contratos, análisis masivo de datos y calificación algorítmica de prospectos con reducción drástica de tiempos.
+            </p>
+          </div>
+
+          <div class="clean-card p-6">
+            <h3 class="text-lg font-bold font-heading text-[#111827] mb-2">Gobernanza, Ética y Ciberseguridad</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Protocolos estrictos de IA responsable, protección y anonimización de datos sensibles corporativos, mitigación de sesgos y prevención de vulnerabilidades de inyección de instrucciones.
+            </p>
+          </div>
+        </div>
+
+        <!-- Alianza Estratégica: Caramelo Media Music -->
+        <div class="clean-card p-8 border-l-4 border-l-pink-500 bg-gradient-to-br from-white to-pink-50/20">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-xs font-mono-clean text-pink-700 font-bold uppercase tracking-wider">Alianza Estratégica & Creación de Género</span>
+            <span class="text-xs text-slate-400 font-mono-clean">Música & Media</span>
+          </div>
+          <h3 class="text-xl sm:text-2xl font-bold font-heading text-[#111827] mb-3">Caramelo Media Music</h3>
+          
+          <div class="space-y-4 text-sm text-slate-600 leading-relaxed mb-6">
+            <div>
+              <strong class="text-slate-900 block mb-1">¿Qué es Caramelo Media Music?:</strong>
+              Es una casa productora musical, incubadora de talento y agencia de <em>management</em> y <em>booking</em> artístico de vanguardia.
+            </div>
+            <div>
+              <strong class="text-slate-900 block mb-1">¿De qué se trata? Creadores del género Cumbia Fresh:</strong>
+              Es la firma pionera y creadora del género <strong>Cumbia Fresh</strong>, una fusión innovadora que combina las raíces de la cumbia tradicional y los ritmos sonideros con beats electrónicos modernos (como tropical house, trance, hard techno), merengue y sonidos urbanos.
+            </div>
+            <div>
+              <strong class="text-slate-900 block mb-1">¿Qué es lo que hace?:</strong>
+              Ejecuta la producción musical ejecutiva, composición, diseño de sonido avanzado, dirección y realización de videoclips oficiales de alto impacto, desarrollo de identidad y <em>branding</em> para artistas, estrategias de lanzamiento digital, <em>booking</em> de presentaciones en vivo y automatización de marketing musical mediante arquitecturas multi-agente e Inteligencia Artificial en alianza con Quantum Media House.
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-2 text-xs font-mono-clean pt-3 border-t border-slate-100">
+            <span class="px-2.5 py-1 bg-pink-100 text-pink-800 rounded font-semibold">Pioneros en Cumbia Fresh</span>
+            <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded">Producción Ejecutiva</span>
+            <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded">Videoclips Oficiales</span>
+            <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded">Booking & Management</span>
+            <span class="px-2.5 py-1 bg-blue-100 text-blue-800 rounded">Marketing con IA</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- DIRECT CONVERSION MODULE (WHATSAPP & EMAIL) -->
+      <div class="clean-card p-8 sm:p-10 text-center bg-white border-2 border-blue-100">
+        <h3 class="text-2xl font-bold font-heading text-[#111827] mb-2">¿Cómo aplicar Inteligencia Artificial a tu Empresa?</h3>
+        <p class="text-sm text-slate-600 max-w-lg mx-auto mb-8">
+          Conversa directamente con nuestra Dirección de Consultoría para diagnosticar tus operaciones e implementar soluciones a la medida.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a 
+            href="https://wa.me/message/S2KVVW6AS7C6C1" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="btn-whatsapp px-8 py-3.5 text-sm font-semibold shadow-md"
+          >
+            <span>💬 Chatear por WhatsApp Directo</span>
+          </a>
+
+          <a 
+            href="mailto:cerkvega@gmail.com" 
+            class="btn-secondary px-8 py-3.5 text-sm font-semibold"
+          >
+            <span>✉️ Enviar Correo a cerkvega@gmail.com</span>
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================================
+         VIEW 3: ACADEMIA IA & CLASES DE IA (+100 GRADUADOS)
+         ======================================================== -->
+    <section id="view-academia" class="view-page hidden py-16 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      
+      <button data-view="home" class="btn-secondary px-3.5 py-1.5 text-xs mb-8">
+        &larr; Volver a Inicio
+      </button>
+
+      <div class="mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono-clean bg-emerald-50 text-emerald-700 font-semibold mb-3">
+          <span>+100 PROFESIONALES FORMADOS DIRECTAMENTE</span>
+        </div>
+        <h1 class="text-3xl sm:text-5xl font-extrabold font-heading text-[#111827] tracking-tight mb-4">
+          Academia & Clases de IA
+        </h1>
+        <p class="text-lg text-slate-600 leading-relaxed max-w-3xl">
+          Cursos universitarios, especializaciones de vanguardia, programas ejecutivos sectoriales y mentoría práctica de alta tecnología impartida directamente por la dirección de Neural Media House.
+        </p>
+      </div>
+
+      <!-- PROGRAMA ESTRELLA PRINCIPAL: GOOGLE ANTIGRAVITY -->
+      <div class="clean-card p-8 sm:p-10 mb-12 border-2 border-blue-200 bg-gradient-to-br from-white via-blue-50/20 to-white relative overflow-hidden shadow-md">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+          <span class="px-3 py-1 rounded-full text-xs font-mono-clean bg-blue-600 text-white font-bold tracking-wider uppercase">
+            ★ Programa Estrella Principal
+          </span>
+          <span class="text-xs font-mono-clean text-blue-700 font-bold bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
+            Desde Cero hasta Nivel Avanzado
+          </span>
+        </div>
+
+        <h2 class="text-2xl sm:text-3xl font-extrabold font-heading text-[#111827] mb-3">
+          Programa Estrella — Cursos de Google Antigravity (Desde Cero hasta Nivel Avanzado)
+        </h2>
+
+        <p class="text-base text-slate-700 leading-relaxed mb-6">
+          Programa práctico e intensivo diseñado para dominar el entorno de desarrollo asistido por IA más avanzado de la industria tecnológica. Aprende a construir, orquestar y desplegar soluciones de software complejas a máxima velocidad.
+        </p>
+
+        <div class="p-5 rounded-xl bg-white border border-blue-100 mb-6 space-y-3">
+          <div class="text-xs font-mono-clean text-blue-800 font-bold uppercase tracking-wider">
+            Temario y Alcance Profesional:
+          </div>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Abarca desde los fundamentos e interfaz desde cero hasta nivel experto, <strong>creación y orquestación de enjambres de agentes con Antigravity</strong>, arquitectura e ingeniería de software full-stack sin fricción, automatización de flujos de código, depuración inteligente, integración de APIs y despliegue de aplicaciones web y plataformas SaaS listas para producción.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-slate-100">
+          <div class="flex flex-wrap gap-2 text-xs font-mono-clean">
+            <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded font-semibold">Enjambres de Agentes</span>
+            <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded font-semibold">Ingeniería Full-Stack</span>
+            <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded font-semibold">Plataformas SaaS</span>
+          </div>
+          <a href="https://wa.me/message/S2KVVW6AS7C6C1" target="_blank" rel="noopener noreferrer" class="btn-primary px-5 py-2.5 text-xs font-semibold">
+            Solicitar Temario de Antigravity Vía WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Grid of Secondary Programs -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        
+        <!-- UAM Azcapotzalco -->
+        <div class="clean-card p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 text-xs font-mono-clean rounded bg-blue-50 text-blue-700 font-semibold">UAM Azcapotzalco</span>
+              <span class="text-xs font-mono-clean text-slate-500">20 Horas</span>
+            </div>
+            <h3 class="text-xl font-bold font-heading text-[#111827] mb-3">Audio Generativo con ElevenLabs (20 hrs en UAM Azcapotzalco)</h3>
+            <p class="text-sm text-slate-600 leading-relaxed mb-5">
+              Curso intensivo universitario de <strong>20 horas sobre ElevenLabs e Inteligencia Artificial de Audio</strong> impartido en la Universidad Autónoma Metropolitana (Unidad Azcapotzalco).
+            </p>
+            <ul class="text-xs text-slate-600 space-y-2 mb-6">
+              <li class="flex items-start gap-2">✓ <span>Clonación ética de voz y diseño acústico neuronal</span></li>
+              <li class="flex items-start gap-2">✓ <span>Doblaje multilingüe automatizado</span></li>
+              <li class="flex items-start gap-2">✓ <span>Control de prosodia y cadencia por API</span></li>
+              <li class="flex items-start gap-2">✓ <span>Creación de podcasts y audiolibros sintéticos con post-producción</span></li>
+            </ul>
+          </div>
+          <div class="pt-4 border-t border-slate-100 text-xs font-mono-clean text-slate-500">
+            Acreditación Universitaria Oficial
+          </div>
+        </div>
+
+        <!-- PropTech AI -->
+        <div class="clean-card p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 text-xs font-mono-clean rounded bg-purple-50 text-purple-700 font-semibold">Sector Inmobiliario</span>
+              <span class="text-xs font-mono-clean text-slate-500">4 Semanas</span>
+            </div>
+            <h3 class="text-xl font-bold font-heading text-[#111827] mb-3">Programa PropTech AI</h3>
+            <p class="text-sm text-slate-600 leading-relaxed mb-5">
+              Currículo ejecutivo de <strong>4 semanas diseñado para inmobiliarias, desarrolladores y arquitectos</strong>.
+            </p>
+            <ul class="text-xs text-slate-600 space-y-2 mb-6">
+              <li class="flex items-start gap-2">✓ <span>Google Workspace potenciado con Gemini</span></li>
+              <li class="flex items-start gap-2">✓ <span>Automatización de embudos comerciales de captación</span></li>
+              <li class="flex items-start gap-2">✓ <span>Renderizado sintético y virtual staging hiperrealista</span></li>
+              <li class="flex items-start gap-2">✓ <span>Recorridos arquitectónicos conceptuales con IA</span></li>
+            </ul>
+          </div>
+          <div class="pt-4 border-t border-slate-100 text-xs font-mono-clean text-slate-500">
+            Especialización Sectorial
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Certificaciones & Cursos Audiovisuales -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div class="clean-card p-6">
+          <h3 class="text-base font-bold font-heading text-[#111827] mb-2">Evaluador Acreditado e Inmersión</h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-3">
+            Mentoría práctica respaldada por registros de acreditación como evaluador independiente ante instituciones como la <strong>Universidad ICEMéxico</strong> y desarrollo de programas ejecutivos en colaboración con consultoras aliadas como <em>Creación Empresarial</em>.
+          </p>
+          <span class="text-xs font-mono-clean text-emerald-700 font-semibold">+100 profesionales graduados</span>
+        </div>
+
+        <div class="clean-card p-6">
+          <h3 class="text-base font-bold font-heading text-[#111827] mb-2">Cursos de Producción y Post-Producción Audiovisual</h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-3">
+            Programas técnicos de alta especialización enfocados en dirección técnica, realización cinematográfica, edición no lineal, <em>color grading</em>, diseño sonoro, operación de streaming profesional y flujos de trabajo audiovisuales de vanguardia.
+          </p>
+          <span class="text-xs font-mono-clean text-purple-700 font-semibold">Especialización Técnica & Broadcast</span>
+        </div>
+      </div>
+
+      <!-- Herramientas Dominadas en los Cursos (Stack Completo) -->
+      <div class="clean-card p-6 sm:p-8 mb-16 bg-slate-50">
+        <span class="text-xs font-mono-clean text-slate-500 uppercase tracking-wider block mb-4 font-semibold">
+          Herramientas Dominadas en los Cursos (Stack Tecnológico):
+        </span>
+        <div class="flex flex-wrap gap-2.5">
+          <span class="px-3 py-1.5 bg-blue-100 text-blue-800 rounded-lg font-bold text-xs font-mono-clean border border-blue-200">
+            Google Antigravity
+          </span>
+          <span class="px-3 py-1.5 bg-purple-100 text-purple-800 rounded-lg font-bold text-xs font-mono-clean border border-purple-200">
+            Creación de Agentes Independientes con Inteligencia Artificial
+          </span>
+          <span class="px-3 py-1.5 bg-white text-slate-800 rounded-lg font-bold text-xs font-mono-clean border border-slate-200 shadow-sm">
+            Claude (Anthropic)
+          </span>
+          <span class="px-3 py-1.5 bg-white text-slate-800 rounded-lg font-bold text-xs font-mono-clean border border-slate-200 shadow-sm">
+            Google Labs
+          </span>
+          <span class="px-3 py-1.5 bg-white text-slate-800 rounded-lg font-bold text-xs font-mono-clean border border-slate-200 shadow-sm">
+            NotebookLM
+          </span>
+          <span class="px-3 py-1.5 bg-white text-slate-800 rounded-lg font-bold text-xs font-mono-clean border border-slate-200 shadow-sm">
+            Google AI Studio
+          </span>
+          <span class="px-3 py-1.5 bg-white text-slate-800 rounded-lg font-bold text-xs font-mono-clean border border-slate-200 shadow-sm">
+            Midjourney
+          </span>
+          <span class="px-3 py-1.5 bg-white text-slate-800 rounded-lg font-bold text-xs font-mono-clean border border-slate-200 shadow-sm">
+            ComfyUI
+          </span>
+          <span class="px-3 py-1.5 bg-white text-slate-800 rounded-lg font-bold text-xs font-mono-clean border border-slate-200 shadow-sm">
+            Google Veo
+          </span>
+          <span class="px-3 py-1.5 bg-white text-slate-800 rounded-lg font-bold text-xs font-mono-clean border border-slate-200 shadow-sm">
+            Runway
+          </span>
+          <span class="px-3 py-1.5 bg-emerald-100 text-emerald-800 rounded-lg font-bold text-xs font-mono-clean border border-emerald-200">
+            ElevenLabs
+          </span>
+        </div>
+      </div>
+
+      <!-- DIRECT CONVERSION MODULE (WHATSAPP & EMAIL) -->
+      <div class="clean-card p-8 sm:p-10 text-center bg-white border-2 border-emerald-100">
+        <h3 class="text-2xl font-bold font-heading text-[#111827] mb-2">Inscripciones y Capacitación Corporativa</h3>
+        <p class="text-sm text-slate-600 max-w-lg mx-auto mb-8">
+          Comunícate por WhatsApp para recibir los temarios completos, fechas de inicio y modalidades para equipos de trabajo.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a 
+            href="https://wa.me/message/S2KVVW6AS7C6C1" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="btn-whatsapp px-8 py-3.5 text-sm font-semibold shadow-md"
+          >
+            <span>💬 Consultar por WhatsApp Directo</span>
+          </a>
+
+          <a 
+            href="mailto:cerkvega@gmail.com" 
+            class="btn-secondary px-8 py-3.5 text-sm font-semibold"
+          >
+            <span>✉️ Enviar Correo a cerkvega@gmail.com</span>
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================================
+         VIEW 4: GOVTECH WAR ROOM (SIMULACIÓN TERRITORIAL)
+         ======================================================== -->
+    <section id="view-govtech" class="view-page hidden py-16 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      
+      <button data-view="home" class="btn-secondary px-3.5 py-1.5 text-xs mb-8">
+        &larr; Volver a Inicio
+      </button>
+
+      <div class="mb-12">
+        <span class="px-3 py-1 rounded-full text-xs font-mono-clean bg-red-50 text-red-700 font-semibold mb-3 inline-block">
+          División de Inteligencia Gubernamental & Software Electoral
+        </span>
+        <h1 class="text-3xl sm:text-5xl font-extrabold font-heading text-[#111827] tracking-tight mb-4">
+          GovTech War Room
+        </h1>
+        <p class="text-lg text-slate-600 leading-relaxed max-w-3xl">
+          <em>GovTech War Room</em> es un software como servicio (SaaS) de alta disponibilidad, desarrollado bajo una infraestructura robusta y modular orientada a la seguridad de grado político, el procesamiento en tiempo real y la optimización de recursos electorales.
+        </p>
+      </div>
+
+      <!-- Arquitectura Tecnológica y Especificaciones de GovTech War Room -->
+      <div class="clean-card p-8 sm:p-10 mb-10 space-y-10">
+        <div>
+          <span class="text-xs font-mono-clean text-blue-600 font-bold uppercase tracking-wider block mb-1">
+            Ficha Técnica Exhaustiva
+          </span>
+          <h2 class="text-2xl font-bold font-heading text-[#111827]">
+            Arquitectura Tecnológica y Especificaciones de GovTech War Room
+          </h2>
+          <p class="text-sm text-slate-600 mt-2">
+            Plataforma de comando estratégico y simulación basada en inferencia algorítmica activa y datos geoespaciales oficiales.
+          </p>
+        </div>
+
+        <!-- 1. Stack Tecnológico y Rendimiento -->
+        <div class="border-t border-slate-100 pt-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="w-7 h-7 rounded-lg bg-blue-100 text-blue-800 flex items-center justify-center font-bold text-xs font-mono-clean">01</span>
+            <h3 class="text-lg font-bold font-heading text-slate-900">Stack Tecnológico y Rendimiento</h3>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pl-0 sm:pl-9">
+            <div class="p-5 rounded-xl bg-white border border-slate-200">
+              <h4 class="font-bold text-sm text-slate-900 mb-1.5 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+                Frontend Modular y Alta Velocidad
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Interfaz de usuario construida bajo componentes reactivos de alto rendimiento, organizada mediante un sistema de navegación por pestañas independientes y una maquetación compacta en cuadrícula optimizada para visualización ejecutiva en dispositivos de escritorio y móviles.
+              </p>
+            </div>
+            <div class="p-5 rounded-xl bg-white border border-slate-200">
+              <h4 class="font-bold text-sm text-slate-900 mb-1.5 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
+                Despliegue e Infraestructura Cloud
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Alojamiento en la nube de alto rendimiento con distribución global de contenido, garantizando tiempos de respuesta mínimos, escalabilidad automática ante picos de tráfico y certificados de seguridad SSL/TLS estrictos de extremo a extremo.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Motor de Inteligencia Artificial y Enjambres de Agentes Gemelos -->
+        <div class="border-t border-slate-100 pt-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="w-7 h-7 rounded-lg bg-purple-100 text-purple-800 flex items-center justify-center font-bold text-xs font-mono-clean">02</span>
+            <h3 class="text-lg font-bold font-heading text-slate-900">Motor de Inteligencia Artificial y Enjambres de Agentes Gemelos</h3>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pl-0 sm:pl-9">
+            <div class="p-5 rounded-xl bg-white border border-slate-200">
+              <h4 class="font-bold text-sm text-slate-900 mb-1.5 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-purple-500"></span>
+                Simulación con Enjambres de Agentes Gemelos
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                La plataforma integra un sofisticado sistema de inteligencia artificial basado en enjambres de agentes gemelos que simulan dinámicamente el comportamiento, la aprobación y las reacciones de una sociedad compleja en tiempo real.
+              </p>
+            </div>
+            <div class="p-5 rounded-xl bg-white border border-slate-200">
+              <h4 class="font-bold text-sm text-slate-900 mb-1.5 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-pink-500"></span>
+                Cero Datos Estáticos
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Todo el sistema opera mediante inferencia algorítmica activa, generando análisis demográficos profundos, reportes de riesgo sindical, un escudo dinámico de preguntas y estrategias de contra-narrativa de manera instantánea.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Integración de Datos Geoespaciales y Oficiales -->
+        <div class="border-t border-slate-100 pt-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-xs font-mono-clean">03</span>
+            <h3 class="text-lg font-bold font-heading text-slate-900">Integración de Datos Geoespaciales y Oficiales</h3>
+          </div>
+          <div class="space-y-4 pl-0 sm:pl-9">
+            <div class="p-5 rounded-xl bg-white border border-slate-200">
+              <h4 class="font-bold text-sm text-slate-900 mb-2 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                Cruce Estocástico Institucional Avanzado
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+                Procesamiento automatizado de variables socioeconómicas y demográficas mediante la integración y consulta cruzada de múltiples fuentes, portales y bases de datos oficiales:
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                <div class="p-3 rounded-lg bg-slate-50 border border-slate-100">
+                  <strong class="text-slate-900 block mb-1">🏛️ INEGI</strong>
+                  <span class="text-slate-600">Mapeo censal completo, indicadores de carencias sociales y estadísticas geoespaciales por manzana y localidad.</span>
+                </div>
+                <div class="p-3 rounded-lg bg-slate-50 border border-slate-100">
+                  <strong class="text-slate-900 block mb-1">🗳️ INE</strong>
+                  <span class="text-slate-600">Listas nominales actualizadas, cartografía electoral y delimitación precisa de secciones y distritos.</span>
+                </div>
+                <div class="p-3 rounded-lg bg-slate-50 border border-slate-100">
+                  <strong class="text-slate-900 block mb-1">📊 CONEVAL</strong>
+                  <span class="text-slate-600">Indicadores multidimensionales de pobreza, rezago social y vulnerabilidad por región.</span>
+                </div>
+                <div class="p-3 rounded-lg bg-slate-50 border border-slate-100">
+                  <strong class="text-slate-900 block mb-1">🌐 Portales de Datos Abiertos</strong>
+                  <span class="text-slate-600">Repositorio amplio de registros estadísticos estatales y federales de consulta pública para máxima precisión.</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <h4 class="font-bold text-xs sm:text-sm text-slate-900 mb-1 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-blue-600"></span>
+                Estratificación Metodológica AMAI
+              </h4>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Aplicación de criterios de Nivel Socioeconómico (NSE) para perfilar con precisión milimétrica el comportamiento electoral por territorio.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Seguridad, Gobernanza y Control de Sesiones -->
+        <div class="border-t border-slate-100 pt-6">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="w-7 h-7 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-xs font-mono-clean">04</span>
+            <h3 class="text-lg font-bold font-heading text-slate-900">Seguridad, Gobernanza y Control de Sesiones</h3>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pl-0 sm:pl-9">
+            <div class="p-5 rounded-xl bg-white border border-slate-200">
+              <h4 class="font-bold text-sm text-slate-900 mb-1.5 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                Aislamiento SaaS Independiente
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Arquitectura operada bajo un subdominio dedicado, completamente separada del sitio web institucional para garantizar la confidencialidad absoluta de los datos de campaña.
+              </p>
+            </div>
+            <div class="p-5 rounded-xl bg-white border border-slate-200">
+              <h4 class="font-bold text-sm text-slate-900 mb-1.5 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                Control de Acceso y Persistencia
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Autenticación robusta mediante tokens seguros, temporizador de inactividad estricto (cierre automático de sesión a los 5 minutos) y un panel administrativo para la gestión de licencias demo por tiempo determinado.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Coordinación Estatal y Estrategia Territorial Activa -->
+      <div class="clean-card p-8 mb-16">
+        <h2 class="text-xl font-bold font-heading text-[#111827] mb-6">Coordinación Estatal y Estrategia Territorial Activa</h2>
+
+        <!-- Despliegue Limpio Hidalgo & Oriente Edomex -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div class="p-6 rounded-xl border border-slate-200 bg-white">
+            <div class="text-xs font-mono-clean text-blue-600 font-bold uppercase mb-1">Estructura Estatal</div>
+            <h3 class="font-bold text-slate-900 mb-2">Coordinación General en el Estado de Hidalgo</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Liderazgo y operación de la estructura de análisis predictivo, diagnóstico socioeconómico y articulación de proyectos estratégicos a nivel estatal en Hidalgo, vinculando la simulación de datos con la toma de decisiones y planeación territorial.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-xl border border-slate-200 bg-white">
+            <div class="text-xs font-mono-clean text-purple-600 font-bold uppercase mb-1">Valle de México</div>
+            <h3 class="font-bold text-slate-900 mb-2">Estrategas en Municipios del Oriente del Edomex</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Despliegue como estrategas de cabecera en la zona oriente del Valle de México, ejecutando mapeo micro-territorial, narrativa segmentada por municipio, evaluación de impacto de programas locales y operación de cuartos de guerra basados en datos en tiempo real.
+            </p>
+          </div>
+        </div>
+
+        <!-- Bloque de Cierre Destacado Exclusivo al Final -->
+        <div class="p-5 rounded-xl bg-slate-50 border border-slate-200 text-center">
+          <div class="text-base sm:text-lg font-bold text-slate-900 font-heading">
+            Clara Badillo y Jair Villanueva
+          </div>
+          <div class="text-xs font-mono-clean text-blue-700 font-semibold mt-1">
+            Coordinadores de los Municipios del Oriente del Estado de México y del Estado de Hidalgo
+          </div>
+        </div>
+      </div>
+
+      <!-- Deep Dive CTA -->
+      <div class="clean-card p-8 text-center">
+        <h3 class="text-lg font-bold font-heading text-[#111827] mb-2">¿Requieres una Demostración del Simulador Territorial?</h3>
+        <p class="text-sm text-slate-600 mb-6 max-w-md mx-auto">
+          Podemos agendar una sesión privada para equipos de gobierno, comités de campaña y consultores políticos.
+        </p>
+        <div class="flex items-center justify-center gap-4">
+          <a href="https://wa.me/message/S2KVVW6AS7C6C1" target="_blank" rel="noopener noreferrer" class="btn-whatsapp px-6 py-3 text-xs font-semibold">
+            Solicitar Demostración por WhatsApp
+          </a>
+          <button data-view="app-govtech" class="btn-secondary px-6 py-3 text-xs">
+            Ver Ficha Técnica de la Plataforma
+          </button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================================
+         VIEW 5: PRODUCCIÓN BROADCAST & CCTV
+         ======================================================== -->
+    <section id="view-broadcast" class="view-page hidden py-16 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      
+      <button data-view="home" class="btn-secondary px-3.5 py-1.5 text-xs mb-8">
+        &larr; Volver a Inicio
+      </button>
+
+      <div class="mb-12">
+        <span class="px-3 py-1 rounded-full text-xs font-mono-clean bg-purple-50 text-purple-700 font-semibold mb-3 inline-block">
+          Operaciones Audiovisuales de Alta Fidelidad
+        </span>
+        <h1 class="text-3xl sm:text-5xl font-extrabold font-heading text-[#111827] tracking-tight mb-4">
+          Producción Broadcast & CCTV
+        </h1>
+        <p class="text-lg text-slate-600 leading-relaxed max-w-3xl">
+          Infraestructura broadcast de última generación para transmisión en vivo masiva, realización cinematográfica corporativa y post-producción con riguroso estándar de industria.
+        </p>
+      </div>
+
+      <!-- Two Strict Areas -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        
+        <!-- Área 1 -->
+        <div class="clean-card p-8 flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-mono-clean text-blue-600 font-bold uppercase mb-2 block">Área Operativa 01</span>
+            <h2 class="text-xl font-bold font-heading text-[#111827] mb-4">Realización Cinematográfica y Post-Producción de Alto Nivel</h2>
+            
+            <div class="space-y-4 text-sm text-slate-600 leading-relaxed">
+              <div>
+                <strong class="text-slate-900 block mb-1">Dirección y Producción Ejecutiva:</strong>
+                Desarrollo integral de campañas publicitarias masivas, comunicación institucional gubernamental, contenido corporativo de alto impacto y plataformas digitales.
+              </div>
+              <div class="pt-3 border-t border-slate-100">
+                <strong class="text-slate-900 block mb-1">Post-Producción, Color y Audio:</strong>
+                Edición no lineal, montaje, color grading profesional y finalización en <strong>DaVinci Resolve</strong>, con diseño acústico, mezcla multicanal y masterización sonora en <strong>FL Studio</strong>.
+              </div>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-mono-clean text-slate-500">
+            DaVinci Resolve · FL Studio Mastering
+          </div>
+        </div>
+
+        <!-- Área 2 -->
+        <div class="clean-card p-8 flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-mono-clean text-purple-600 font-bold uppercase mb-2 block">Área Operativa 02</span>
+            <h2 class="text-xl font-bold font-heading text-[#111827] mb-4">Ingeniería de Transmisión en Vivo, Plenarios y CCTV</h2>
+            
+            <div class="space-y-4 text-sm text-slate-600 leading-relaxed">
+              <div>
+                <strong class="text-slate-900 block mb-1">Trayectoria y Clientes de Alto Nivel:</strong>
+                Se ha trabajado en producciones, plenarios y transmisiones de alto nivel con empresas e instituciones de alto renombre como <strong>Nestlé, BBVA, Santander, Oral-B, Colgate, la empresa Synergis y la Asociación Mexicana de Ventas Online (AMVO)</strong>, además de la producción técnica y circuito cerrado para conciertos de artistas famosos y de renombre.
+              </div>
+              <div class="pt-3 border-t border-slate-100">
+                <strong class="text-slate-900 block mb-1">Operación Técnica Integral:</strong>
+                Despliegue y dirección técnica de unidades de producción en vivo, circuitos cerrados de televisión (CCTV) multicámara, sincronización de servidores de video y codificación de ultra baja latencia con distribución redundante hacia plataformas digitales globales y servidores dedicados.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Action -->
+      <div class="clean-card p-8 text-center">
+        <h3 class="text-lg font-bold font-heading text-[#111827] mb-2">Cotizar Cobertura Broadcast o Producción</h3>
+        <p class="text-sm text-slate-600 mb-6 max-w-md mx-auto">
+          Diseñamos el rider técnico a la medida de tu convención, plenario o campaña publicitaria.
+        </p>
+        <a href="https://wa.me/message/S2KVVW6AS7C6C1" target="_blank" rel="noopener noreferrer" class="btn-whatsapp px-6 py-3 text-xs font-semibold">
+          Cotizar por WhatsApp
+        </a>
+      </div>
+
+    </section>
+
+    <!-- ========================================================
+         VIEW 6: CONTACTO EJECUTIVO & UBICACIÓN CORPORATIVA
+         ======================================================== -->
+    <section id="view-contacto" class="view-page hidden py-16 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      
+      <button data-view="home" class="btn-secondary px-3.5 py-1.5 text-xs mb-8">
+        &larr; Volver a Inicio
+      </button>
+
+      <div class="mb-12">
+        <span class="px-3 py-1 rounded-full text-xs font-mono-clean bg-slate-100 text-slate-700 font-semibold mb-3 inline-block">
+          Sede Matriz en Santa Fe
+        </span>
+        <h1 class="text-3xl sm:text-5xl font-extrabold font-heading text-[#111827] tracking-tight mb-4">
+          Contacto Directo
+        </h1>
+        <p class="text-lg text-slate-600 leading-relaxed max-w-3xl">
+          Atención ejecutiva para consultoría estratégica, licencias de plataformas SaaS, despliegue de War Rooms y producción broadcast.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
+        
+        <!-- Interactive Form (7 Cols) -->
+        <div class="lg:col-span-7 clean-card p-8">
+          <h2 class="text-lg font-bold font-heading text-[#111827] mb-6 pb-2 border-b border-slate-100">
+            Formulario de Contacto
+          </h2>
+
+          <div id="form-success-alert" class="hidden mb-6"></div>
+
+          <form id="main-contact-form" class="space-y-4">
+            <div>
+              <label for="form-name" class="block text-xs font-mono-clean text-slate-600 mb-1">Nombre Completo *</label>
+              <input type="text" id="form-name" required placeholder="Ej. Lic. Fernando Morales" class="clean-input w-full px-4 py-2.5 text-sm">
+            </div>
+
+            <div>
+              <label for="form-org" class="block text-xs font-mono-clean text-slate-600 mb-1">Empresa o Institución *</label>
+              <input type="text" id="form-org" required placeholder="Ej. Grupo Empresarial / Dependencia" class="clean-input w-full px-4 py-2.5 text-sm">
+            </div>
+
+            <div>
+              <label for="form-division" class="block text-xs font-mono-clean text-slate-600 mb-1">División de Interés *</label>
+              <select id="form-division" class="clean-input w-full px-4 py-2.5 text-sm text-slate-800">
+                <option value="Automatización de IA para Redes Sociales (Facebook, Instagram y TikTok)">Automatización de IA para Redes Sociales (Facebook, Instagram y TikTok)</option>
+                <option value="Quantum Media House">Quantum Media House (Consultoría Multi-Agente & LLMs)</option>
+                <option value="Academia & Capacitación IA">Academia & Clases de IA (Cursos Corporativos / Google Antigravity)</option>
+                <option value="GovTech War Room">GovTech War Room (Hidalgo / Oriente Edomex)</option>
+                <option value="Plataformas Propias SaaS">Licenciamiento de Software SaaS (6 Plataformas)</option>
+                <option value="Producción Broadcast & CCTV">Producción Broadcast & CCTV (Live Streaming / Plenarios)</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="form-message" class="block text-xs font-mono-clean text-slate-600 mb-1">Mensaje *</label>
+              <textarea id="form-message" rows="4" required placeholder="Describe los requerimientos de tu proyecto o consulta..." class="clean-input w-full px-4 py-2.5 text-sm resize-none"></textarea>
+            </div>
+
+            <button type="submit" id="form-submit-btn" class="btn-primary w-full py-3 text-sm">
+              Enviar Mensaje a Dirección
+            </button>
+          </form>
+        </div>
+
+        <!-- Corporate Directory (5 Cols) -->
+        <div class="lg:col-span-5 space-y-6">
+          
+          <!-- Headquarters -->
+          <div class="clean-card p-6">
+            <span class="text-xs font-mono-clean text-blue-600 uppercase font-semibold block mb-1">Sede Corporativa Central</span>
+            <h3 class="text-base font-bold text-slate-900 mb-2">Santa Fe, Ciudad de México</h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+              <strong>Calle Guillermo González Camarena 900-B</strong><br>
+              Santa Fe, Álvaro Obregón, C.P. 01210, Ciudad de México (CDMX).
+            </p>
+            <div class="text-[11px] text-slate-400 font-mono-clean">
+              Atención presencial previa confirmación de agenda.
+            </div>
+          </div>
+
+          <!-- Phone & WhatsApp -->
+          <div class="clean-card p-6">
+            <span class="text-xs font-mono-clean text-slate-500 uppercase font-semibold block mb-1">Línea Telefónica Directa</span>
+            <div class="text-2xl font-bold font-mono-clean text-slate-900 mb-4">56 4523 4452</div>
+            <div class="grid grid-cols-2 gap-2">
+              <a href="tel:5645234452" class="btn-secondary py-2 text-xs">Llamar</a>
+              <a href="https://wa.me/message/S2KVVW6AS7C6C1" target="_blank" rel="noopener noreferrer" class="btn-whatsapp py-2 text-xs">WhatsApp</a>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="clean-card p-6">
+            <span class="text-xs font-mono-clean text-slate-500 uppercase font-semibold block mb-1">Correo Electrónico Oficial</span>
+            <div class="text-base font-mono-clean font-bold text-slate-900 mb-4">cerkvega@gmail.com</div>
+            <div class="grid grid-cols-2 gap-2">
+              <a href="mailto:cerkvega@gmail.com" class="btn-secondary py-2 text-xs">Enviar Email</a>
+              <button onclick="copyEmail()" class="btn-secondary py-2 text-xs">Copiar Correo</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ========================================================
+         INDIVIDUAL DEDICATED PAGES: 6 SAAS & SOFTWARE PLATFORMS
+         ======================================================== -->
+
+    <!-- APP 1: GOVTECH WAR ROOM -->
+    <section id="view-app-govtech" class="view-page hidden py-16 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      <button data-view="home" class="btn-secondary px-3.5 py-1.5 text-xs mb-8">&larr; Volver a Inicio</button>
+      <div class="mb-10">
+        <span class="px-3 py-1 rounded-full text-xs font-mono-clean bg-blue-50 text-blue-700 font-semibold mb-2 inline-block">Plataforma SaaS 01 · GovTech</span>
+        <h1 class="text-3xl sm:text-5xl font-extrabold font-heading text-[#111827]">GovTech War Room</h1>
+        <p class="text-slate-600 mt-2 text-base">Software como servicio (SaaS) de alta disponibilidad, desarrollado bajo una infraestructura robusta y modular orientada a la seguridad de grado político, el procesamiento en tiempo real y la optimización de recursos electorales.</p>
+      </div>
+
+      <div class="clean-card p-8 sm:p-10 space-y-8 mb-8">
+        <div>
+          <h2 class="font-bold text-slate-900 text-xl font-heading mb-3">Arquitectura Tecnológica y Especificaciones</h2>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Plataforma diseñada para cuartos de guerra, dependencias de gobierno y consultorías electorales de alto nivel, con inferencia algorítmica activa y cero datos estáticos.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-slate-100">
+          <div class="p-5 rounded-xl bg-slate-50 border border-slate-200">
+            <h3 class="font-bold text-slate-900 text-sm mb-2 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-blue-600"></span>
+              1. Stack Tecnológico & Rendimiento
+            </h3>
+            <ul class="text-xs text-slate-600 space-y-2 leading-relaxed">
+              <li><strong>Frontend Modular:</strong> Componentes reactivos de alta velocidad, navegación por pestañas independientes y cuadrícula optimizada para móvil y desktop.</li>
+              <li><strong>Infraestructura Cloud:</strong> Alojamiento en la nube de alta disponibilidad, escalabilidad ante picos electorales y cifrado SSL/TLS de extremo a extremo.</li>
+            </ul>
+          </div>
+
+          <div class="p-5 rounded-xl bg-slate-50 border border-slate-200">
+            <h3 class="font-bold text-slate-900 text-sm mb-2 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-purple-600"></span>
+              2. Motor de IA & Agentes Gemelos
+            </h3>
+            <ul class="text-xs text-slate-600 space-y-2 leading-relaxed">
+              <li><strong>Enjambres de Agentes Gemelos:</strong> Simulación dinámica del comportamiento, aprobación y reacciones de una sociedad compleja en tiempo real.</li>
+              <li><strong>Cero Datos Estáticos:</strong> Inferencia algorítmica activa, escudos dinámicos de preguntas, reportes de riesgo y contra-narrativas instantáneas.</li>
+            </ul>
+          </div>
+
+          <div class="p-5 rounded-xl bg-slate-50 border border-slate-200">
+            <h3 class="font-bold text-slate-900 text-sm mb-2 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+              3. Datos Geoespaciales & Cruce Oficial
+            </h3>
+            <ul class="text-xs text-slate-600 space-y-2 leading-relaxed">
+              <li><strong>Cruce Estocástico Institucional:</strong> Integración cruzada con microdatos de <strong>INEGI</strong>, padrón y cartografía <strong>INE</strong>, índices <strong>CONEVAL</strong> y repositorios de datos abiertos estatales y federales.</li>
+              <li><strong>Estratificación AMAI:</strong> Perfilamiento de Nivel Socioeconómico (NSE) con precisión territorial manzana por manzana.</li>
+            </ul>
+          </div>
+
+          <div class="p-5 rounded-xl bg-slate-50 border border-slate-200">
+            <h3 class="font-bold text-slate-900 text-sm mb-2 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-amber-600"></span>
+              4. Seguridad, Gobernanza & Sesiones
+            </h3>
+            <ul class="text-xs text-slate-600 space-y-2 leading-relaxed">
+              <li><strong>Aislamiento SaaS:</strong> Operación bajo subdominio dedicado, garantizando confidencialidad absoluta y separación de datos.</li>
+              <li><strong>Control de Sesión:</strong> Autenticación por tokens, cierre automático por inactividad a los 5 minutos y panel de licencias demo por tiempo limitado.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Mención de Coordinación Territorial Clara Badillo y Jair Villanueva -->
+        <div class="p-4 rounded-xl bg-blue-50/60 border border-blue-200 text-center">
+          <div class="text-sm font-bold text-slate-900 font-heading">
+            Clara Badillo y Jair Villanueva
+          </div>
+          <div class="text-xs font-mono-clean text-blue-700 font-semibold mt-0.5">
+            Equipo de Coordinación para el Estado de Hidalgo y Municipios del Oriente del Estado de México
+          </div>
+        </div>
+
+        <div class="pt-2 border-t border-slate-100 flex flex-wrap gap-2 text-xs font-mono-clean">
+          <span class="px-2.5 py-1 bg-slate-100 rounded">INEGI Microdatos</span>
+          <span class="px-2.5 py-1 bg-slate-100 rounded">Cartografía INE</span>
+          <span class="px-2.5 py-1 bg-slate-100 rounded">CONEVAL Rezago</span>
+          <span class="px-2.5 py-1 bg-slate-100 rounded">Estratificación AMAI</span>
+          <span class="px-2.5 py-1 bg-slate-100 rounded">Enjambres de Agentes Gemelos</span>
+          <span class="px-2.5 py-1 bg-slate-100 rounded">Cierre 5 Min Auto-Logout</span>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-4">
+        <a href="https://wa.me/message/S2KVVW6AS7C6C1" target="_blank" rel="noopener noreferrer" class="btn-whatsapp px-6 py-3 text-xs font-semibold">Solicitar Demostración por WhatsApp</a>
+        <button data-view="contacto" class="btn-secondary px-6 py-3 text-xs">Contactar a Dirección</button>
+      </div>
+    </section>
+
+    <!-- APP 2: NEURAL INTELIGENT -->
+    <section id="view-app-neural" class="view-page hidden py-16 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      <button data-view="home" class="btn-secondary px-3.5 py-1.5 text-xs mb-8">&larr; Volver a Inicio</button>
+      <div class="mb-10">
+        <span class="px-3 py-1 rounded-full text-xs font-mono-clean bg-purple-50 text-purple-700 font-semibold mb-2 inline-block">Plataforma SaaS 02 · Analítica / Investigación</span>
+        <h1 class="text-3xl sm:text-5xl font-extrabold font-heading text-[#111827]">Neural Inteligent</h1>
+        <p class="text-slate-600 mt-2 text-base">App web open-source de simulación predictiva basada en inteligencia de enjambres (swarm intelligence).</p>
+      </div>
+      <div class="clean-card p-8 space-y-6 mb-8">
+        <div>
+          <h3 class="font-bold text-slate-900 text-lg mb-2">Visión y Arquitectura</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Pronostica el comportamiento y reacciones de audiencias complejas ante estímulos visuales, textuales o mediáticos. Funciona con modelos de IA open-weight ejecutados en hardware local con total soberanía y privacidad de datos sin fuga a servidores externos.
+          </p>
+        </div>
+        <div class="pt-4 border-t border-slate-100">
+          <span class="text-xs font-mono-clean text-slate-500 uppercase font-semibold block mb-2">Stack Tecnológico Clave:</span>
+          <div class="flex flex-wrap gap-2 text-xs font-mono-clean">
+            <span class="px-2.5 py-1 bg-slate-100 rounded">Modelos Open-Weight Locales</span>
+            <span class="px-2.5 py-1 bg-slate-100 rounded">Análisis Multimodal</span>
+            <span class="px-2.5 py-1 bg-slate-100 rounded">Swarm Intelligence Engine</span>
+            <span class="px-2.5 py-1 bg-slate-100 rounded">Zero-Data Leaks Architecture</span>
+          </div>
+        </div>
+        <div class="pt-4 border-t border-slate-100 text-xs font-mono-clean text-slate-500 flex justify-between">
+          <span>Inferencia Local: &lt; 120ms</span>
+          <span>Privacidad: 100% On-Premise</span>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <a href="https://wa.me/message/S2KVVW6AS7C6C1" target="_blank" rel="noopener noreferrer" class="btn-whatsapp px-6 py-3 text-xs font-semibold">Solicitar Demo / Licencia</a>
+        <button data-view="contacto" class="btn-secondary px-6 py-3 text-xs">Contactar a Dirección</button>
+      </div>
+    </section>
+
+    <!-- APP 3: LEXCORE AI -->
+    <section id="view-app-lexcore" class="view-page hidden py-16 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      <button data-view="home" class="btn-secondary px-3.5 py-1.5 text-xs mb-8">&larr; Volver a Inicio</button>
+      <div class="mb-10">
+        <span class="px-3 py-1 rounded-full text-xs font-mono-clean bg-indigo-50 text-indigo-700 font-semibold mb-2 inline-block">Plataforma SaaS 03 · LegalTech / Corporativo</span>
+        <h1 class="text-3xl sm:text-5xl font-extrabold font-heading text-[#111827]">LexCore AI</h1>
+        <p class="text-slate-600 mt-2 text-base">Suite integral de operaciones legales para despachos jurídicos y departamentos legales.</p>
+      </div>
+      <div class="clean-card p-8 space-y-6 mb-8">
+        <div>
+          <h3 class="font-bold text-slate-900 text-lg mb-2">Visión y Arquitectura</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Automatiza la redacción de contratos y demandas complejas, búsquedas jurisprudenciales semánticas, calificación de prospectos mediante agentes conversacionales y organización autónoma de expedientes en Google Drive corporativo con cifrado de grado bancario.
+          </p>
+        </div>
+        <div class="pt-4 border-t border-slate-100">
+          <span class="text-xs font-mono-clean text-slate-500 uppercase font-semibold block mb-2">Stack Tecnológico Clave:</span>
+          <div class="flex flex-wrap gap-2 text-xs font-mono-clean">
+            <span class="px-2.5 py-1 bg-slate-100 rounded">Google Drive API</span>
+            <span class="px-2.5 py-1 bg-slate-100 rounded">Búsqueda Semántica Vectorial</span>
+            <span class="px-2.5 py-1 bg-slate-100 rounded">LLMs Jurídicos Especializados</span>
+            <span class="px-2.5 py-1 bg-slate-100 rounded">OAuth2 Enterprise</span>
+          </div>
+        </div>
+        <div class="pt-4 border-t border-slate-100 text-xs font-mono-clean text-slate-500 flex justify-between">
+          <span>Eficiencia: -70% tiempo de minutas</span>
+          <span>Catalogación: 100% Automatizada</span>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <a href="https://wa.me/message/S2KVVW6AS7C6C1" target="_blank" rel="noopener noreferrer" class="btn-whatsapp px-6 py-3 text-xs font-semibold">Solicitar Demo / Licencia</a>
+        <button data-view="contacto" class="btn-secondary px-6 py-3 text-xs">Contactar a Dirección</button>
+      </div>
+    </section>
+
+    <!-- APP 4: CLASSROOM IA -->
+    <section id="view-app-classroom" class="view-page hidden py-16 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      <button data-view="home" class="btn-secondary px-3.5 py-1.5 text-xs mb-8">&larr; Volver a Inicio</button>
+      <div class="mb-10">
+        <span class="px-3 py-1 rounded-full text-xs font-mono-clean bg-emerald-50 text-emerald-700 font-semibold mb-2 inline-block">Plataforma SaaS 04 · EdTech / Gestión Escolar</span>
+        <h1 class="text-3xl sm:text-5xl font-extrabold font-heading text-[#111827]">Classroom IA</h1>
+        <p class="text-slate-600 mt-2 text-base">Plataforma SaaS en la nube para docentes e instituciones académicas de educación media y superior.</p>
+      </div>
+      <div class="clean-card p-8 space-y-6 mb-8">
+        <div>
+          <h3 class="font-bold text-slate-900 text-lg mb-2">Visión y Arquitectura</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Centraliza listas de alumnos, automatiza evaluaciones y retroalimentación personalizada mediante rúbricas pedagógicas inteligentes e integra un motor forense de análisis de texto para detectar contenido generado por IA con alta fidelidad.
+          </p>
+        </div>
+        <div class="pt-4 border-t border-slate-100">
+          <span class="text-xs font-mono-clean text-slate-500 uppercase font-semibold block mb-2">Stack Tecnológico Clave:</span>
+          <div class="flex flex-wrap gap-2 text-xs font-mono-clean">
+            <span class="px-2.5 py-1 bg-slate-100 rounded">Google APIs</span>
+            <span class="px-2.5 py-1 bg-slate-100 rounded">Firebase / Firestore</span>
+            <span class="px-2.5 py-1 bg-slate-100 rounded">Algoritmos Forenses Anti-Plagio</span>
+            <span class="px-2.5 py-1 bg-slate-100 rounded">Generative Rubrics Engine</span>
+          </div>
+        </div>
+        <div class="pt-4 border-t border-slate-100 text-xs font-mono-clean text-slate-500 flex justify-between">
+          <span>Ahorro en Calificación: +85%</span>
+          <span>Precisión Forense: &gt; 94%</span>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <a href="https://wa.me/message/S2KVVW6AS7C6C1" target="_blank" rel="noopener noreferrer" class="btn-whatsapp px-6 py-3 text-xs font-semibold">Solicitar Demo / Licencia</a>
+        <button data-view="contacto" class="btn-secondary px-6 py-3 text-xs">Contactar a Dirección</button>
+      </div>
+    </section>
+
+    <!-- APP 5: SANDBOX LEARNING -->
+    <section id="view-app-sandbox" class="view-page hidden py-16 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      <button data-view="home" class="btn-secondary px-3.5 py-1.5 text-xs mb-8">&larr; Volver a Inicio</button>
+      <div class="mb-10">
+        <span class="px-3 py-1 rounded-full text-xs font-mono-clean bg-amber-50 text-amber-700 font-semibold mb-2 inline-block">Plataforma SaaS 05 · EdTech / Simulación Científica</span>
+        <h1 class="text-3xl sm:text-5xl font-extrabold font-heading text-[#111827]">Sandbox Learning</h1>
+        <p class="text-slate-600 mt-2 text-base">Ecosistema interactivo de laboratorios virtuales inmersivos en 2D y 3D en tiempo real.</p>
+      </div>
+      <div class="clean-card p-8 space-y-6 mb-8">
+        <div>
+          <h3 class="font-bold text-slate-900 text-lg mb-2">Visión y Arquitectura</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Transforma conceptos abstractos en laboratorios manipulables en tiempo real para 6 áreas del conocimiento: <strong>Física, Química, Biología, Matemáticas, Geografía e Historia</strong> mediante simulaciones dinámicas en el navegador web sin plugins adicionales.
+          </p>
+        </div>
+        <div class="pt-4 border-t border-slate-100">
+          <span class="text-xs font-mono-clean text-slate-500 uppercase font-semibold block mb-2">Stack Tecnológico Clave:</span>
+          <div class="flex flex-wrap gap-2 text-xs font-mono-clean">
+            <span class="px-2.5 py-1 bg-slate-100 rounded">Motores WebGL 2D/3D</span>
+            <span class="px-2.5 py-1 bg-slate-100 rounded">Física Computacional</span>
+            <span class="px-2.5 py-1 bg-slate-100 rounded">Integradores Numéricos Runge-Kutta</span>
+            <span class="px-2.5 py-1 bg-slate-100 rounded">Simulación STEM Paramétrica</span>
+          </div>
+        </div>
+        <div class="pt-4 border-t border-slate-100 text-xs font-mono-clean text-slate-500 flex justify-between">
+          <span>6 Áreas Curriculares</span>
+          <span>Rendimiento: 60 FPS en Navegador</span>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <a href="https://wa.me/message/S2KVVW6AS7C6C1" target="_blank" rel="noopener noreferrer" class="btn-whatsapp px-6 py-3 text-xs font-semibold">Solicitar Demo / Licencia</a>
+        <button data-view="contacto" class="btn-secondary px-6 py-3 text-xs">Contactar a Dirección</button>
+      </div>
+    </section>
+
+    <!-- APP 6: CHESS TITANS 3D -->
+    <section id="view-app-chess" class="view-page hidden py-16 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      <button data-view="home" class="btn-secondary px-3.5 py-1.5 text-xs mb-8">&larr; Volver a Inicio</button>
+      <div class="mb-10">
+        <span class="px-3 py-1 rounded-full text-xs font-mono-clean bg-slate-100 text-slate-800 font-semibold mb-2 inline-block">Plataforma SaaS 06 · Gaming / IA Interactiva</span>
+        <h1 class="text-3xl sm:text-5xl font-extrabold font-heading text-[#111827]">Chess Titans 3D</h1>
+        <p class="text-slate-600 mt-2 text-base">Entorno tridimensional web de ajedrez con oponente táctico adaptativo conectado a Gemini AI.</p>
+      </div>
+      <div class="clean-card p-8 space-y-6 mb-8">
+        <div>
+          <h3 class="font-bold text-slate-900 text-lg mb-2">Visión y Arquitectura</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Combina renderizado 3D acelerado por WebGL y Three.js con un motor de reglas en chess.js, conectado en tiempo real con la API de Gemini AI para ofrecer un rival inteligente que analiza la estrategia posicional y comenta las jugadas pedagógicamente.
+          </p>
+        </div>
+        <div class="pt-4 border-t border-slate-100">
+          <span class="text-xs font-mono-clean text-slate-500 uppercase font-semibold block mb-2">Stack Tecnológico Clave:</span>
+          <div class="flex flex-wrap gap-2 text-xs font-mono-clean">
+            <span class="px-2.5 py-1 bg-slate-100 rounded">Three.js</span>
+            <span class="px-2.5 py-1 bg-slate-100 rounded">chess.js</span>
+            <span class="px-2.5 py-1 bg-slate-100 rounded">OrbitControls</span>
+            <span class="px-2.5 py-1 bg-slate-100 rounded">Google AI Studio (Gemini API)</span>
+          </div>
+        </div>
+        <div class="pt-4 border-t border-slate-100 text-xs font-mono-clean text-slate-500 flex justify-between">
+          <span>Inferencia Táctica: &lt; 500ms</span>
+          <span>Render 3D Acelerado 60 FPS</span>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <a href="https://wa.me/message/S2KVVW6AS7C6C1" target="_blank" rel="noopener noreferrer" class="btn-whatsapp px-6 py-3 text-xs font-semibold">Solicitar Demo / Licencia</a>
+        <button data-view="contacto" class="btn-secondary px-6 py-3 text-xs">Contactar a Dirección</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================
+       FOOTER MINIMALISTA
+       ======================================================== -->
+  <footer class="border-t border-[#E5E7EB] bg-white py-12 px-4 sm:px-6 lg:px-8 mt-20">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-slate-500">
+      <div class="flex items-center gap-3">
+        <img src="assets/logo.png" alt="Neural Media House" class="h-8 w-auto object-contain filter drop-shadow-[0_1px_2px_rgba(15,23,42,0.3)]">
+        <span>·</span>
+        <span>Santa Fe, CDMX</span>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-4 text-xs">
+        <button data-view="home" class="hover:text-slate-900">Inicio</button>
+        <button data-view="quantum" class="hover:text-slate-900">Quantum</button>
+        <button data-view="academia" class="hover:text-slate-900">Academia</button>
+        <button data-view="govtech" class="hover:text-slate-900">GovTech</button>
+        <button data-view="broadcast" class="hover:text-slate-900">Broadcast</button>
+        <button data-view="contacto" class="hover:text-slate-900">Contacto</button>
+      </div>
+
+      <div>
+        &copy; 2026 Neural Media House. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript App -->
+  <script src="js/app.js"></script>
+</body>
+</html>
