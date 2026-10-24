@@ -18,9 +18,17 @@ Sede Corporativa: Calle Guillermo González Camarena 900-B, Santa Fe, Álvaro Ob
 
 ## 🏛️ Divisiones Corporativas
 
-1. **Quantum Media House:** Producción musical, videoclips en 4K/6K con IA, booking, management y alianza estratégica con **Caramelo Media Music** (pioneros en Cumbia Fresh).
+1. **Quantum Media House:** 
+   - **Automatización de Inteligencia Artificial para Redes Sociales (Facebook, Instagram y TikTok):** Flujos conversacionales y agentes de IA 24/7 para contestación inmediata, segmentación algorítmica de audiencias, generación y calificación de leads, y optimización de crecimiento orgánico sin intervención humana.
+   - Producción musical, videoclips en 4K/6K con IA, booking, management y alianza estratégica con **Caramelo Media Music** (pioneros en Cumbia Fresh).
 2. **Academia & Clases de IA:** Formación de élite con **+100 alumnos y profesionales graduados**, cátedra en **Google Antigravity**, creación de agentes autónomos y stack de 11 herramientas punteras.
-3. **GovTech War Room:** Inteligencia territorial, modelos predictivos, simulación de políticas públicas e integración con microdatos censales de INEGI y SEP. Coordinación territorial encabezada por **Clara Badillo y Jair Villanueva**.
+3. **GovTech War Room:** 
+   - Software como servicio (SaaS) de alta disponibilidad orientado a la seguridad de grado político, procesamiento en tiempo real y optimización de recursos electorales.
+   - **Frontend Modular & Cloud:** Componentes reactivos, pestañas independientes, cuadrícula ejecutiva y distribución global con SSL/TLS.
+   - **Motor de IA & Agentes Gemelos:** Simulación dinámica de comportamiento social y cero datos estáticos mediante inferencia activa.
+   - **Cruce Estocástico Oficial:** Integración con INEGI (censo y manzanas), INE (listas y distritos), CONEVAL (rezago y pobreza) y portales de datos abiertos, con estratificación AMAI.
+   - **Seguridad & Aislamiento:** Subdominio dedicado, tokens seguros y cierre de sesión automático a los 5 minutos.
+   - Coordinación territorial encabezada por **Clara Badillo y Jair Villanueva** para el Estado de Hidalgo y municipios del Oriente del Estado de México.
 4. **Broadcast & CCTV:** Infraestructura broadcast para conciertos masivos y eventos corporativos de marcas multinacionales (Nestlé, BBVA, Santander, Colgate, AMVO).
 5. **Catálogo de 6 Plataformas Propias:**
    - **GovTech War Room:** Simulación predictiva y políticas públicas.
